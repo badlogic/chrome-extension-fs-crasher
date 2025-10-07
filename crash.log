@@ -1,0 +1,879 @@
+-------------------------------------
+Translated Report (Full Report Below)
+-------------------------------------
+
+Process:               Google Chrome [81175]
+Path:                  /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+Identifier:            com.google.Chrome
+Version:               141.0.7390.55 (7390.55)
+Code Type:             ARM-64 (Native)
+Parent Process:        launchd [1]
+User ID:               501
+
+Date/Time:             2025-10-07 16:03:14.6897 +0200
+OS Version:            macOS 15.5 (24F74)
+Report Version:        12
+Anonymous UUID:        9ACC9D10-BF3E-1513-3ED3-C3389E55CC00
+
+Sleep/Wake UUID:       F942EE6D-B93D-4829-BC19-5F957BC14ED8
+
+Time Awake Since Boot: 1200000 seconds
+Time Since Wake:       13513 seconds
+
+System Integrity Protection: enabled
+
+Crashed Thread:        0  CrBrowserMain  Dispatch queue: com.apple.main-thread
+
+Exception Type:        EXC_BAD_ACCESS (SIGSEGV)
+Exception Codes:       KERN_INVALID_ADDRESS at 0x0000000000000038
+Exception Codes:       0x0000000000000001, 0x0000000000000038
+
+Termination Reason:    Namespace SIGNAL, Code 11 Segmentation fault: 11
+Terminating Process:   exc handler [81175]
+
+VM Region Info: 0x38 is not in any region.  Bytes before following region: 4296654792
+      REGION TYPE                    START - END         [ VSIZE] PRT/MAX SHRMOD  REGION DETAIL
+      UNUSED SPACE AT START
+--->
+      __TEXT                      10019c000-1001a0000    [   16K] r-x/r-x SM=COW  /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+
+Thread 0 Crashed:: CrBrowserMain Dispatch queue: com.apple.main-thread
+0   Google Chrome Framework       	       0x12bc44484 ChromeMain + 172223836
+1   Google Chrome Framework       	       0x12bc44414 ChromeMain + 172223724
+2   Google Chrome Framework       	       0x127d97480 ChromeMain + 106503512
+3   Google Chrome Framework       	       0x1219bcfc8 ChromeMain + 1800352
+4   Google Chrome Framework       	       0x125272484 ChromeMain + 61263196
+5   Google Chrome Framework       	       0x121997e0c ChromeMain + 1648356
+6   Google Chrome Framework       	       0x1252721a8 ChromeMain + 61262464
+7   CoreFoundation                	       0x18740dcd4 __CFRUNLOOP_IS_CALLING_OUT_TO_A_SOURCE0_PERFORM_FUNCTION__ + 28
+8   CoreFoundation                	       0x18740dc68 __CFRunLoopDoSource0 + 172
+9   CoreFoundation                	       0x18740d9d4 __CFRunLoopDoSources0 + 232
+10  CoreFoundation                	       0x18740c628 __CFRunLoopRun + 840
+11  CoreFoundation                	       0x18740bc58 CFRunLoopRunSpecific + 572
+12  HIToolbox                     	       0x192ea027c RunCurrentEventLoopInMode + 324
+13  HIToolbox                     	       0x192ea331c ReceiveNextEventCommon + 216
+14  HIToolbox                     	       0x19302e484 _BlockUntilNextEventMatchingListInModeWithFilter + 76
+15  AppKit                        	       0x18b333ab4 _DPSNextEvent + 684
+16  AppKit                        	       0x18bcd25b0 -[NSApplication(NSEventRouting) _nextEventMatchingEventMask:untilDate:inMode:dequeue:] + 688
+17  Google Chrome Framework       	       0x12826ada0 ChromeMain + 111564408
+18  Google Chrome Framework       	       0x121997e0c ChromeMain + 1648356
+19  Google Chrome Framework       	       0x125238084 ChromeMain + 61024604
+20  AppKit                        	       0x18b326c64 -[NSApplication run] + 480
+21  Google Chrome Framework       	       0x124037d60 ChromeMain + 42149432
+22  Google Chrome Framework       	       0x124037ba0 ChromeMain + 42148984
+23  Google Chrome Framework       	       0x1233cc374 ChromeMain + 29125708
+24  Google Chrome Framework       	       0x12392fcc8 ChromeMain + 34776480
+25  Google Chrome Framework       	       0x12421304c ChromeMain + 44095780
+26  Google Chrome Framework       	       0x124212d90 ChromeMain + 44095080
+27  Google Chrome Framework       	       0x123add598 ChromeMain + 36535920
+28  Google Chrome Framework       	       0x12303b668 ChromeMain + 25386816
+29  Google Chrome Framework       	       0x12180595c ChromeMain + 564
+30  Google Chrome                 	       0x10019c85c main + 196
+31  dyld                          	       0x186f82b98 start + 6076
+
+Thread 1:
+0   libsystem_kernel.dylib        	       0x1872e0c34 mach_msg2_trap + 8
+1   libsystem_kernel.dylib        	       0x1872f33a0 mach_msg2_internal + 76
+2   libsystem_kernel.dylib        	       0x1872e9764 mach_msg_overwrite + 484
+3   libsystem_kernel.dylib        	       0x1872e0fa8 mach_msg + 24
+4   Google Chrome Framework       	       0x12459b9d0 ChromeMain + 47801000
+5   Google Chrome Framework       	       0x12459b67c ChromeMain + 47800148
+6   Google Chrome Framework       	       0x12bae3174 ChromeMain + 170777164
+7   libsystem_pthread.dylib       	       0x187322c0c _pthread_start + 136
+8   libsystem_pthread.dylib       	       0x18731db80 thread_start + 8
+
+Thread 2:: HangWatcher
+0   libsystem_kernel.dylib        	       0x1872e0c34 mach_msg2_trap + 8
+1   libsystem_kernel.dylib        	       0x1872f33a0 mach_msg2_internal + 76
+2   libsystem_kernel.dylib        	       0x1872e9764 mach_msg_overwrite + 484
+3   libsystem_kernel.dylib        	       0x1872e0fa8 mach_msg + 24
+4   Google Chrome Framework       	       0x121fca31c ChromeMain + 8145908
+5   Google Chrome Framework       	       0x128590dd0 ChromeMain + 114865832
+6   Google Chrome Framework       	       0x128590e9c ChromeMain + 114866036
+7   Google Chrome Framework       	       0x122f17ee8 ChromeMain + 24192960
+8   libsystem_pthread.dylib       	       0x187322c0c _pthread_start + 136
+9   libsystem_pthread.dylib       	       0x18731db80 thread_start + 8
+
+Thread 3:: PerfettoTrace
+0   libsystem_kernel.dylib        	       0x1872ec95c kevent64 + 8
+1   Google Chrome Framework       	       0x121c77780 ChromeMain + 4661336
+2   Google Chrome Framework       	       0x1233cc374 ChromeMain + 29125708
+3   Google Chrome Framework       	       0x12392fcc8 ChromeMain + 34776480
+4   Google Chrome Framework       	       0x12389ba88 ChromeMain + 34169696
+5   Google Chrome Framework       	       0x12389b818 ChromeMain + 34169072
+6   Google Chrome Framework       	       0x122f17ee8 ChromeMain + 24192960
+7   libsystem_pthread.dylib       	       0x187322c0c _pthread_start + 136
+8   libsystem_pthread.dylib       	       0x18731db80 thread_start + 8
+
+Thread 4:: ThreadPoolServiceThread
+0   libsystem_kernel.dylib        	       0x1872ec95c kevent64 + 8
+1   Google Chrome Framework       	       0x121c77780 ChromeMain + 4661336
+2   Google Chrome Framework       	       0x1233cc374 ChromeMain + 29125708
+3   Google Chrome Framework       	       0x12392fcc8 ChromeMain + 34776480
+4   Google Chrome Framework       	       0x12526d500 ChromeMain + 61242840
+5   Google Chrome Framework       	       0x12389b818 ChromeMain + 34169072
+6   Google Chrome Framework       	       0x122f17ee8 ChromeMain + 24192960
+7   libsystem_pthread.dylib       	       0x187322c0c _pthread_start + 136
+8   libsystem_pthread.dylib       	       0x18731db80 thread_start + 8
+
+Thread 5:: ThreadPoolForegroundWorker
+0   libsystem_kernel.dylib        	       0x1872e0c34 mach_msg2_trap + 8
+1   libsystem_kernel.dylib        	       0x1872f33a0 mach_msg2_internal + 76
+2   libsystem_kernel.dylib        	       0x1872e9764 mach_msg_overwrite + 484
+3   libsystem_kernel.dylib        	       0x1872e0fa8 mach_msg + 24
+4   Google Chrome Framework       	       0x121fc77cc ChromeMain + 8134820
+5   Google Chrome Framework       	       0x121fc6f30 ChromeMain + 8132616
+6   Google Chrome Framework       	       0x121fc6e44 ChromeMain + 8132380
+7   Google Chrome Framework       	       0x122f17ee8 ChromeMain + 24192960
+8   libsystem_pthread.dylib       	       0x187322c0c _pthread_start + 136
+9   libsystem_pthread.dylib       	       0x18731db80 thread_start + 8
+
+Thread 6:: ThreadPoolBackgroundWorker
+0   libsystem_kernel.dylib        	       0x1872e0c34 mach_msg2_trap + 8
+1   libsystem_kernel.dylib        	       0x1872f33a0 mach_msg2_internal + 76
+2   libsystem_kernel.dylib        	       0x1872e9764 mach_msg_overwrite + 484
+3   libsystem_kernel.dylib        	       0x1872e0fa8 mach_msg + 24
+4   Google Chrome Framework       	       0x121fca31c ChromeMain + 8145908
+5   Google Chrome Framework       	       0x121fc7cc8 ChromeMain + 8136096
+6   Google Chrome Framework       	       0x121fc6f5c ChromeMain + 8132660
+7   Google Chrome Framework       	       0x121fc6e9c ChromeMain + 8132468
+8   Google Chrome Framework       	       0x122f17ee8 ChromeMain + 24192960
+9   libsystem_pthread.dylib       	       0x187322c0c _pthread_start + 136
+10  libsystem_pthread.dylib       	       0x18731db80 thread_start + 8
+
+Thread 7:: ThreadPoolBackgroundWorker
+0   libsystem_kernel.dylib        	       0x1872e0c34 mach_msg2_trap + 8
+1   libsystem_kernel.dylib        	       0x1872f33a0 mach_msg2_internal + 76
+2   libsystem_kernel.dylib        	       0x1872e9764 mach_msg_overwrite + 484
+3   libsystem_kernel.dylib        	       0x1872e0fa8 mach_msg + 24
+4   Google Chrome Framework       	       0x121fca31c ChromeMain + 8145908
+5   Google Chrome Framework       	       0x121fc7cc8 ChromeMain + 8136096
+6   Google Chrome Framework       	       0x121fc6f5c ChromeMain + 8132660
+7   Google Chrome Framework       	       0x121fc6e9c ChromeMain + 8132468
+8   Google Chrome Framework       	       0x122f17ee8 ChromeMain + 24192960
+9   libsystem_pthread.dylib       	       0x187322c0c _pthread_start + 136
+10  libsystem_pthread.dylib       	       0x18731db80 thread_start + 8
+
+Thread 8:: Chrome_IOThread
+0   libsystem_kernel.dylib        	       0x1872ec95c kevent64 + 8
+1   Google Chrome Framework       	       0x121c77780 ChromeMain + 4661336
+2   Google Chrome Framework       	       0x1233cc374 ChromeMain + 29125708
+3   Google Chrome Framework       	       0x12392fcc8 ChromeMain + 34776480
+4   Google Chrome Framework       	       0x1251b2814 ChromeMain + 60477676
+5   Google Chrome Framework       	       0x12389b818 ChromeMain + 34169072
+6   Google Chrome Framework       	       0x122f17ee8 ChromeMain + 24192960
+7   libsystem_pthread.dylib       	       0x187322c0c _pthread_start + 136
+8   libsystem_pthread.dylib       	       0x18731db80 thread_start + 8
+
+Thread 9:: MemoryInfra
+0   libsystem_kernel.dylib        	       0x1872e0c34 mach_msg2_trap + 8
+1   libsystem_kernel.dylib        	       0x1872f33a0 mach_msg2_internal + 76
+2   libsystem_kernel.dylib        	       0x1872e9764 mach_msg_overwrite + 484
+3   libsystem_kernel.dylib        	       0x1872e0fa8 mach_msg + 24
+4   Google Chrome Framework       	       0x121fca31c ChromeMain + 8145908
+5   Google Chrome Framework       	       0x125264c5c ChromeMain + 61207860
+6   Google Chrome Framework       	       0x1233cc374 ChromeMain + 29125708
+7   Google Chrome Framework       	       0x12392fcc8 ChromeMain + 34776480
+8   Google Chrome Framework       	       0x12389ba88 ChromeMain + 34169696
+9   Google Chrome Framework       	       0x12389b818 ChromeMain + 34169072
+10  Google Chrome Framework       	       0x122f17ee8 ChromeMain + 24192960
+11  libsystem_pthread.dylib       	       0x187322c0c _pthread_start + 136
+12  libsystem_pthread.dylib       	       0x18731db80 thread_start + 8
+
+Thread 10:: NetworkConfigWatcher
+0   libsystem_kernel.dylib        	       0x1872e0c34 mach_msg2_trap + 8
+1   libsystem_kernel.dylib        	       0x1872f33a0 mach_msg2_internal + 76
+2   libsystem_kernel.dylib        	       0x1872e9764 mach_msg_overwrite + 484
+3   libsystem_kernel.dylib        	       0x1872e0fa8 mach_msg + 24
+4   CoreFoundation                	       0x18740de7c __CFRunLoopServiceMachPort + 160
+5   CoreFoundation                	       0x18740c798 __CFRunLoopRun + 1208
+6   CoreFoundation                	       0x18740bc58 CFRunLoopRunSpecific + 572
+7   Foundation                    	       0x1889dac78 -[NSRunLoop(NSRunLoop) runMode:beforeDate:] + 212
+8   Google Chrome Framework       	       0x124037cd0 ChromeMain + 42149288
+9   Google Chrome Framework       	       0x124037ba0 ChromeMain + 42148984
+10  Google Chrome Framework       	       0x1233cc374 ChromeMain + 29125708
+11  Google Chrome Framework       	       0x12392fcc8 ChromeMain + 34776480
+12  Google Chrome Framework       	       0x12389ba88 ChromeMain + 34169696
+13  Google Chrome Framework       	       0x12389b818 ChromeMain + 34169072
+14  Google Chrome Framework       	       0x122f17ee8 ChromeMain + 24192960
+15  libsystem_pthread.dylib       	       0x187322c0c _pthread_start + 136
+16  libsystem_pthread.dylib       	       0x18731db80 thread_start + 8
+
+Thread 11:: CrShutdownDetector
+0   libsystem_kernel.dylib        	       0x1872e17dc read + 8
+1   Google Chrome Framework       	       0x1284894dc ChromeMain + 113786292
+2   Google Chrome Framework       	       0x122f17ee8 ChromeMain + 24192960
+3   libsystem_pthread.dylib       	       0x187322c0c _pthread_start + 136
+4   libsystem_pthread.dylib       	       0x18731db80 thread_start + 8
+
+Thread 12:: NetworkConfigWatcher
+0   libsystem_kernel.dylib        	       0x1872e0c34 mach_msg2_trap + 8
+1   libsystem_kernel.dylib        	       0x1872f33a0 mach_msg2_internal + 76
+2   libsystem_kernel.dylib        	       0x1872e9764 mach_msg_overwrite + 484
+3   libsystem_kernel.dylib        	       0x1872e0fa8 mach_msg + 24
+4   CoreFoundation                	       0x18740de7c __CFRunLoopServiceMachPort + 160
+5   CoreFoundation                	       0x18740c798 __CFRunLoopRun + 1208
+6   CoreFoundation                	       0x18740bc58 CFRunLoopRunSpecific + 572
+7   Foundation                    	       0x1889dac78 -[NSRunLoop(NSRunLoop) runMode:beforeDate:] + 212
+8   Google Chrome Framework       	       0x124037cd0 ChromeMain + 42149288
+9   Google Chrome Framework       	       0x124037ba0 ChromeMain + 42148984
+10  Google Chrome Framework       	       0x1233cc374 ChromeMain + 29125708
+11  Google Chrome Framework       	       0x12392fcc8 ChromeMain + 34776480
+12  Google Chrome Framework       	       0x12389ba88 ChromeMain + 34169696
+13  Google Chrome Framework       	       0x12389b818 ChromeMain + 34169072
+14  Google Chrome Framework       	       0x122f17ee8 ChromeMain + 24192960
+15  libsystem_pthread.dylib       	       0x187322c0c _pthread_start + 136
+16  libsystem_pthread.dylib       	       0x18731db80 thread_start + 8
+
+Thread 13:: ThreadPoolForegroundWorker
+0   libsystem_kernel.dylib        	       0x1872e0c34 mach_msg2_trap + 8
+1   libsystem_kernel.dylib        	       0x1872f33a0 mach_msg2_internal + 76
+2   libsystem_kernel.dylib        	       0x1872e9764 mach_msg_overwrite + 484
+3   libsystem_kernel.dylib        	       0x1872e0fa8 mach_msg + 24
+4   Google Chrome Framework       	       0x121fca31c ChromeMain + 8145908
+5   Google Chrome Framework       	       0x121fc7cc8 ChromeMain + 8136096
+6   Google Chrome Framework       	       0x121fc6f30 ChromeMain + 8132616
+7   Google Chrome Framework       	       0x121fc6e44 ChromeMain + 8132380
+8   Google Chrome Framework       	       0x122f17ee8 ChromeMain + 24192960
+9   libsystem_pthread.dylib       	       0x187322c0c _pthread_start + 136
+10  libsystem_pthread.dylib       	       0x18731db80 thread_start + 8
+
+Thread 14:: ThreadPoolForegroundWorker
+0   libsystem_kernel.dylib        	       0x1872e0c34 mach_msg2_trap + 8
+1   libsystem_kernel.dylib        	       0x1872f33a0 mach_msg2_internal + 76
+2   libsystem_kernel.dylib        	       0x1872e9764 mach_msg_overwrite + 484
+3   libsystem_kernel.dylib        	       0x1872e0fa8 mach_msg + 24
+4   Google Chrome Framework       	       0x121fca31c ChromeMain + 8145908
+5   Google Chrome Framework       	       0x121fc7cc8 ChromeMain + 8136096
+6   Google Chrome Framework       	       0x121fc6f30 ChromeMain + 8132616
+7   Google Chrome Framework       	       0x121fc6e44 ChromeMain + 8132380
+8   Google Chrome Framework       	       0x122f17ee8 ChromeMain + 24192960
+9   libsystem_pthread.dylib       	       0x187322c0c _pthread_start + 136
+10  libsystem_pthread.dylib       	       0x18731db80 thread_start + 8
+
+Thread 15:: ThreadPoolForegroundWorker
+0   libsystem_kernel.dylib        	       0x1872e0c34 mach_msg2_trap + 8
+1   libsystem_kernel.dylib        	       0x1872f33a0 mach_msg2_internal + 76
+2   libsystem_kernel.dylib        	       0x1872e9764 mach_msg_overwrite + 484
+3   libsystem_kernel.dylib        	       0x1872e0fa8 mach_msg + 24
+4   Google Chrome Framework       	       0x121fca31c ChromeMain + 8145908
+5   Google Chrome Framework       	       0x121fc7cc8 ChromeMain + 8136096
+6   Google Chrome Framework       	       0x121fc6f30 ChromeMain + 8132616
+7   Google Chrome Framework       	       0x121fc6e44 ChromeMain + 8132380
+8   Google Chrome Framework       	       0x122f17ee8 ChromeMain + 24192960
+9   libsystem_pthread.dylib       	       0x187322c0c _pthread_start + 136
+10  libsystem_pthread.dylib       	       0x18731db80 thread_start + 8
+
+Thread 16:: ThreadPoolForegroundWorker
+0   libsystem_kernel.dylib        	       0x1872e0c34 mach_msg2_trap + 8
+1   libsystem_kernel.dylib        	       0x1872f33a0 mach_msg2_internal + 76
+2   libsystem_kernel.dylib        	       0x1872e9764 mach_msg_overwrite + 484
+3   libsystem_kernel.dylib        	       0x1872e0fa8 mach_msg + 24
+4   Google Chrome Framework       	       0x121fca31c ChromeMain + 8145908
+5   Google Chrome Framework       	       0x121fc7cc8 ChromeMain + 8136096
+6   Google Chrome Framework       	       0x121fc6f30 ChromeMain + 8132616
+7   Google Chrome Framework       	       0x121fc6e44 ChromeMain + 8132380
+8   Google Chrome Framework       	       0x122f17ee8 ChromeMain + 24192960
+9   libsystem_pthread.dylib       	       0x187322c0c _pthread_start + 136
+10  libsystem_pthread.dylib       	       0x18731db80 thread_start + 8
+
+Thread 17:: ThreadPoolForegroundWorker
+0   libsystem_kernel.dylib        	       0x1872e0c34 mach_msg2_trap + 8
+1   libsystem_kernel.dylib        	       0x1872f33a0 mach_msg2_internal + 76
+2   libsystem_kernel.dylib        	       0x1872e9764 mach_msg_overwrite + 484
+3   libsystem_kernel.dylib        	       0x1872e0fa8 mach_msg + 24
+4   Google Chrome Framework       	       0x121fca31c ChromeMain + 8145908
+5   Google Chrome Framework       	       0x121fc7cc8 ChromeMain + 8136096
+6   Google Chrome Framework       	       0x121fc6f30 ChromeMain + 8132616
+7   Google Chrome Framework       	       0x121fc6e44 ChromeMain + 8132380
+8   Google Chrome Framework       	       0x122f17ee8 ChromeMain + 24192960
+9   libsystem_pthread.dylib       	       0x187322c0c _pthread_start + 136
+10  libsystem_pthread.dylib       	       0x18731db80 thread_start + 8
+
+Thread 18:: ThreadPoolForegroundWorker
+0   libsystem_kernel.dylib        	       0x1872e0c34 mach_msg2_trap + 8
+1   libsystem_kernel.dylib        	       0x1872f33a0 mach_msg2_internal + 76
+2   libsystem_kernel.dylib        	       0x1872e9764 mach_msg_overwrite + 484
+3   libsystem_kernel.dylib        	       0x1872e0fa8 mach_msg + 24
+4   Google Chrome Framework       	       0x121fca31c ChromeMain + 8145908
+5   Google Chrome Framework       	       0x121fc7cc8 ChromeMain + 8136096
+6   Google Chrome Framework       	       0x121fc6f30 ChromeMain + 8132616
+7   Google Chrome Framework       	       0x121fc6e44 ChromeMain + 8132380
+8   Google Chrome Framework       	       0x122f17ee8 ChromeMain + 24192960
+9   libsystem_pthread.dylib       	       0x187322c0c _pthread_start + 136
+10  libsystem_pthread.dylib       	       0x18731db80 thread_start + 8
+
+Thread 19:: NetworkNotificationThreadMac
+0   libsystem_kernel.dylib        	       0x1872e0c34 mach_msg2_trap + 8
+1   libsystem_kernel.dylib        	       0x1872f33a0 mach_msg2_internal + 76
+2   libsystem_kernel.dylib        	       0x1872e9764 mach_msg_overwrite + 484
+3   libsystem_kernel.dylib        	       0x1872e0fa8 mach_msg + 24
+4   CoreFoundation                	       0x18740de7c __CFRunLoopServiceMachPort + 160
+5   CoreFoundation                	       0x18740c798 __CFRunLoopRun + 1208
+6   CoreFoundation                	       0x18740bc58 CFRunLoopRunSpecific + 572
+7   Foundation                    	       0x1889dac78 -[NSRunLoop(NSRunLoop) runMode:beforeDate:] + 212
+8   Google Chrome Framework       	       0x124037cd0 ChromeMain + 42149288
+9   Google Chrome Framework       	       0x124037ba0 ChromeMain + 42148984
+10  Google Chrome Framework       	       0x1233cc374 ChromeMain + 29125708
+11  Google Chrome Framework       	       0x12392fcc8 ChromeMain + 34776480
+12  Google Chrome Framework       	       0x12389ba88 ChromeMain + 34169696
+13  Google Chrome Framework       	       0x12389b818 ChromeMain + 34169072
+14  Google Chrome Framework       	       0x122f17ee8 ChromeMain + 24192960
+15  libsystem_pthread.dylib       	       0x187322c0c _pthread_start + 136
+16  libsystem_pthread.dylib       	       0x18731db80 thread_start + 8
+
+Thread 20:: ThreadPoolSingleThreadForegroundBlocking0
+0   libsystem_kernel.dylib        	       0x1872e0c34 mach_msg2_trap + 8
+1   libsystem_kernel.dylib        	       0x1872f33a0 mach_msg2_internal + 76
+2   libsystem_kernel.dylib        	       0x1872e9764 mach_msg_overwrite + 484
+3   libsystem_kernel.dylib        	       0x1872e0fa8 mach_msg + 24
+4   Google Chrome Framework       	       0x121fca31c ChromeMain + 8145908
+5   Google Chrome Framework       	       0x121fc7cc8 ChromeMain + 8136096
+6   Google Chrome Framework       	       0x121fc6fe0 ChromeMain + 8132792
+7   Google Chrome Framework       	       0x121fc6ee8 ChromeMain + 8132544
+8   Google Chrome Framework       	       0x122f17ee8 ChromeMain + 24192960
+9   libsystem_pthread.dylib       	       0x187322c0c _pthread_start + 136
+10  libsystem_pthread.dylib       	       0x18731db80 thread_start + 8
+
+Thread 21:: CacheThread_BlockFile
+0   libsystem_kernel.dylib        	       0x1872ec95c kevent64 + 8
+1   Google Chrome Framework       	       0x121c77780 ChromeMain + 4661336
+2   Google Chrome Framework       	       0x1233cc374 ChromeMain + 29125708
+3   Google Chrome Framework       	       0x12392fcc8 ChromeMain + 34776480
+4   Google Chrome Framework       	       0x12389ba88 ChromeMain + 34169696
+5   Google Chrome Framework       	       0x12389b818 ChromeMain + 34169072
+6   Google Chrome Framework       	       0x122f17ee8 ChromeMain + 24192960
+7   libsystem_pthread.dylib       	       0x187322c0c _pthread_start + 136
+8   libsystem_pthread.dylib       	       0x18731db80 thread_start + 8
+
+Thread 22:: CompositorTileWorker1
+0   libsystem_kernel.dylib        	       0x1872e43cc __psynch_cvwait + 8
+1   libsystem_pthread.dylib       	       0x1873230e0 _pthread_cond_wait + 984
+2   Google Chrome Framework       	       0x1227053b8 ChromeMain + 15727760
+3   Google Chrome Framework       	       0x122b8aac4 ChromeMain + 20468636
+4   Google Chrome Framework       	       0x122f17ee8 ChromeMain + 24192960
+5   libsystem_pthread.dylib       	       0x187322c0c _pthread_start + 136
+6   libsystem_pthread.dylib       	       0x18731db80 thread_start + 8
+
+Thread 23:: NetworkConfigWatcher
+0   libsystem_kernel.dylib        	       0x1872e0c34 mach_msg2_trap + 8
+1   libsystem_kernel.dylib        	       0x1872f33a0 mach_msg2_internal + 76
+2   libsystem_kernel.dylib        	       0x1872e9764 mach_msg_overwrite + 484
+3   libsystem_kernel.dylib        	       0x1872e0fa8 mach_msg + 24
+4   CoreFoundation                	       0x18740de7c __CFRunLoopServiceMachPort + 160
+5   CoreFoundation                	       0x18740c798 __CFRunLoopRun + 1208
+6   CoreFoundation                	       0x18740bc58 CFRunLoopRunSpecific + 572
+7   Foundation                    	       0x1889dac78 -[NSRunLoop(NSRunLoop) runMode:beforeDate:] + 212
+8   Google Chrome Framework       	       0x124037cd0 ChromeMain + 42149288
+9   Google Chrome Framework       	       0x124037ba0 ChromeMain + 42148984
+10  Google Chrome Framework       	       0x1233cc374 ChromeMain + 29125708
+11  Google Chrome Framework       	       0x12392fcc8 ChromeMain + 34776480
+12  Google Chrome Framework       	       0x12389ba88 ChromeMain + 34169696
+13  Google Chrome Framework       	       0x12389b818 ChromeMain + 34169072
+14  Google Chrome Framework       	       0x122f17ee8 ChromeMain + 24192960
+15  libsystem_pthread.dylib       	       0x187322c0c _pthread_start + 136
+16  libsystem_pthread.dylib       	       0x18731db80 thread_start + 8
+
+Thread 24:: ThreadPoolForegroundWorker
+0   libsystem_kernel.dylib        	       0x1872e0c34 mach_msg2_trap + 8
+1   libsystem_kernel.dylib        	       0x1872f33a0 mach_msg2_internal + 76
+2   libsystem_kernel.dylib        	       0x1872e9764 mach_msg_overwrite + 484
+3   libsystem_kernel.dylib        	       0x1872e0fa8 mach_msg + 24
+4   Google Chrome Framework       	       0x121fca31c ChromeMain + 8145908
+5   Google Chrome Framework       	       0x121fc7cc8 ChromeMain + 8136096
+6   Google Chrome Framework       	       0x121fc6f30 ChromeMain + 8132616
+7   Google Chrome Framework       	       0x121fc6e44 ChromeMain + 8132380
+8   Google Chrome Framework       	       0x122f17ee8 ChromeMain + 24192960
+9   libsystem_pthread.dylib       	       0x187322c0c _pthread_start + 136
+10  libsystem_pthread.dylib       	       0x18731db80 thread_start + 8
+
+Thread 25:: ThreadPoolSingleThreadForegroundBlocking1
+0   libsystem_kernel.dylib        	       0x1872e0c34 mach_msg2_trap + 8
+1   libsystem_kernel.dylib        	       0x1872f33a0 mach_msg2_internal + 76
+2   libsystem_kernel.dylib        	       0x1872e9764 mach_msg_overwrite + 484
+3   libsystem_kernel.dylib        	       0x1872e0fa8 mach_msg + 24
+4   Google Chrome Framework       	       0x121fca31c ChromeMain + 8145908
+5   Google Chrome Framework       	       0x121fc7cc8 ChromeMain + 8136096
+6   Google Chrome Framework       	       0x121fc6fe0 ChromeMain + 8132792
+7   Google Chrome Framework       	       0x121fc6ee8 ChromeMain + 8132544
+8   Google Chrome Framework       	       0x122f17ee8 ChromeMain + 24192960
+9   libsystem_pthread.dylib       	       0x187322c0c _pthread_start + 136
+10  libsystem_pthread.dylib       	       0x18731db80 thread_start + 8
+
+Thread 26:: ThreadPoolForegroundWorker
+0   libsystem_kernel.dylib        	       0x1872e0c34 mach_msg2_trap + 8
+1   libsystem_kernel.dylib        	       0x1872f33a0 mach_msg2_internal + 76
+2   libsystem_kernel.dylib        	       0x1872e9764 mach_msg_overwrite + 484
+3   libsystem_kernel.dylib        	       0x1872e0fa8 mach_msg + 24
+4   Google Chrome Framework       	       0x121fca31c ChromeMain + 8145908
+5   Google Chrome Framework       	       0x121fc7cc8 ChromeMain + 8136096
+6   Google Chrome Framework       	       0x121fc6f30 ChromeMain + 8132616
+7   Google Chrome Framework       	       0x121fc6e44 ChromeMain + 8132380
+8   Google Chrome Framework       	       0x122f17ee8 ChromeMain + 24192960
+9   libsystem_pthread.dylib       	       0x187322c0c _pthread_start + 136
+10  libsystem_pthread.dylib       	       0x18731db80 thread_start + 8
+
+Thread 27:: ThreadPoolSingleThreadSharedForeground2
+0   libsystem_kernel.dylib        	       0x1872e0c34 mach_msg2_trap + 8
+1   libsystem_kernel.dylib        	       0x1872f33a0 mach_msg2_internal + 76
+2   libsystem_kernel.dylib        	       0x1872e9764 mach_msg_overwrite + 484
+3   libsystem_kernel.dylib        	       0x1872e0fa8 mach_msg + 24
+4   Google Chrome Framework       	       0x121fca31c ChromeMain + 8145908
+5   Google Chrome Framework       	       0x121fc7cc8 ChromeMain + 8136096
+6   Google Chrome Framework       	       0x121fc6f88 ChromeMain + 8132704
+7   Google Chrome Framework       	       0x121fc6eb0 ChromeMain + 8132488
+8   Google Chrome Framework       	       0x122f17ee8 ChromeMain + 24192960
+9   libsystem_pthread.dylib       	       0x187322c0c _pthread_start + 136
+10  libsystem_pthread.dylib       	       0x18731db80 thread_start + 8
+
+Thread 28:: ThreadPoolForegroundWorker
+0   libsystem_kernel.dylib        	       0x1872e0c34 mach_msg2_trap + 8
+1   libsystem_kernel.dylib        	       0x1872f33a0 mach_msg2_internal + 76
+2   libsystem_kernel.dylib        	       0x1872e9764 mach_msg_overwrite + 484
+3   libsystem_kernel.dylib        	       0x1872e0fa8 mach_msg + 24
+4   Google Chrome Framework       	       0x121fca31c ChromeMain + 8145908
+5   Google Chrome Framework       	       0x121fc7cc8 ChromeMain + 8136096
+6   Google Chrome Framework       	       0x121fc6f30 ChromeMain + 8132616
+7   Google Chrome Framework       	       0x121fc6e44 ChromeMain + 8132380
+8   Google Chrome Framework       	       0x122f17ee8 ChromeMain + 24192960
+9   libsystem_pthread.dylib       	       0x187322c0c _pthread_start + 136
+10  libsystem_pthread.dylib       	       0x18731db80 thread_start + 8
+
+Thread 29:: ThreadPoolForegroundWorker
+0   libsystem_kernel.dylib        	       0x1872e0c34 mach_msg2_trap + 8
+1   libsystem_kernel.dylib        	       0x1872f33a0 mach_msg2_internal + 76
+2   libsystem_kernel.dylib        	       0x1872e9764 mach_msg_overwrite + 484
+3   libsystem_kernel.dylib        	       0x1872e0fa8 mach_msg + 24
+4   Google Chrome Framework       	       0x121fca31c ChromeMain + 8145908
+5   Google Chrome Framework       	       0x121fc7cc8 ChromeMain + 8136096
+6   Google Chrome Framework       	       0x121fc6f30 ChromeMain + 8132616
+7   Google Chrome Framework       	       0x121fc6e44 ChromeMain + 8132380
+8   Google Chrome Framework       	       0x122f17ee8 ChromeMain + 24192960
+9   libsystem_pthread.dylib       	       0x187322c0c _pthread_start + 136
+10  libsystem_pthread.dylib       	       0x18731db80 thread_start + 8
+
+Thread 30:: ThreadPoolSingleThreadSharedBackgroundBlocking3
+0   libsystem_kernel.dylib        	       0x1872e0c34 mach_msg2_trap + 8
+1   libsystem_kernel.dylib        	       0x1872f33a0 mach_msg2_internal + 76
+2   libsystem_kernel.dylib        	       0x1872e9764 mach_msg_overwrite + 484
+3   libsystem_kernel.dylib        	       0x1872e0fa8 mach_msg + 24
+4   Google Chrome Framework       	       0x121fca31c ChromeMain + 8145908
+5   Google Chrome Framework       	       0x121fc7cc8 ChromeMain + 8136096
+6   Google Chrome Framework       	       0x121fc6fb4 ChromeMain + 8132748
+7   Google Chrome Framework       	       0x121fc6efc ChromeMain + 8132564
+8   Google Chrome Framework       	       0x122f17ee8 ChromeMain + 24192960
+9   libsystem_pthread.dylib       	       0x187322c0c _pthread_start + 136
+10  libsystem_pthread.dylib       	       0x18731db80 thread_start + 8
+
+Thread 31:: NetworkConfigWatcher
+0   libsystem_kernel.dylib        	       0x1872e0c34 mach_msg2_trap + 8
+1   libsystem_kernel.dylib        	       0x1872f33a0 mach_msg2_internal + 76
+2   libsystem_kernel.dylib        	       0x1872e9764 mach_msg_overwrite + 484
+3   libsystem_kernel.dylib        	       0x1872e0fa8 mach_msg + 24
+4   CoreFoundation                	       0x18740de7c __CFRunLoopServiceMachPort + 160
+5   CoreFoundation                	       0x18740c798 __CFRunLoopRun + 1208
+6   CoreFoundation                	       0x18740bc58 CFRunLoopRunSpecific + 572
+7   Foundation                    	       0x1889dac78 -[NSRunLoop(NSRunLoop) runMode:beforeDate:] + 212
+8   Google Chrome Framework       	       0x124037cd0 ChromeMain + 42149288
+9   Google Chrome Framework       	       0x124037ba0 ChromeMain + 42148984
+10  Google Chrome Framework       	       0x1233cc374 ChromeMain + 29125708
+11  Google Chrome Framework       	       0x12392fcc8 ChromeMain + 34776480
+12  Google Chrome Framework       	       0x12389ba88 ChromeMain + 34169696
+13  Google Chrome Framework       	       0x12389b818 ChromeMain + 34169072
+14  Google Chrome Framework       	       0x122f17ee8 ChromeMain + 24192960
+15  libsystem_pthread.dylib       	       0x187322c0c _pthread_start + 136
+16  libsystem_pthread.dylib       	       0x18731db80 thread_start + 8
+
+Thread 32:: ThreadPoolForegroundWorker
+0   libsystem_kernel.dylib        	       0x1872e0c34 mach_msg2_trap + 8
+1   libsystem_kernel.dylib        	       0x1872f33a0 mach_msg2_internal + 76
+2   libsystem_kernel.dylib        	       0x1872e9764 mach_msg_overwrite + 484
+3   libsystem_kernel.dylib        	       0x1872e0fa8 mach_msg + 24
+4   Google Chrome Framework       	       0x121fca31c ChromeMain + 8145908
+5   Google Chrome Framework       	       0x121fc7cc8 ChromeMain + 8136096
+6   Google Chrome Framework       	       0x121fc6f30 ChromeMain + 8132616
+7   Google Chrome Framework       	       0x121fc6e44 ChromeMain + 8132380
+8   Google Chrome Framework       	       0x122f17ee8 ChromeMain + 24192960
+9   libsystem_pthread.dylib       	       0x187322c0c _pthread_start + 136
+10  libsystem_pthread.dylib       	       0x18731db80 thread_start + 8
+
+Thread 33:: ThreadPoolForegroundWorker
+0   libsystem_kernel.dylib        	       0x1872e0c34 mach_msg2_trap + 8
+1   libsystem_kernel.dylib        	       0x1872f33a0 mach_msg2_internal + 76
+2   libsystem_kernel.dylib        	       0x1872e9764 mach_msg_overwrite + 484
+3   libsystem_kernel.dylib        	       0x1872e0fa8 mach_msg + 24
+4   Google Chrome Framework       	       0x121fca31c ChromeMain + 8145908
+5   Google Chrome Framework       	       0x121fc7cc8 ChromeMain + 8136096
+6   Google Chrome Framework       	       0x121fc6f30 ChromeMain + 8132616
+7   Google Chrome Framework       	       0x121fc6e44 ChromeMain + 8132380
+8   Google Chrome Framework       	       0x122f17ee8 ChromeMain + 24192960
+9   libsystem_pthread.dylib       	       0x187322c0c _pthread_start + 136
+10  libsystem_pthread.dylib       	       0x18731db80 thread_start + 8
+
+Thread 34:: ThreadPoolForegroundWorker
+0   libsystem_kernel.dylib        	       0x1872e0c34 mach_msg2_trap + 8
+1   libsystem_kernel.dylib        	       0x1872f33a0 mach_msg2_internal + 76
+2   libsystem_kernel.dylib        	       0x1872e9764 mach_msg_overwrite + 484
+3   libsystem_kernel.dylib        	       0x1872e0fa8 mach_msg + 24
+4   Google Chrome Framework       	       0x121fca31c ChromeMain + 8145908
+5   Google Chrome Framework       	       0x121fc7cc8 ChromeMain + 8136096
+6   Google Chrome Framework       	       0x121fc6f30 ChromeMain + 8132616
+7   Google Chrome Framework       	       0x121fc6e44 ChromeMain + 8132380
+8   Google Chrome Framework       	       0x122f17ee8 ChromeMain + 24192960
+9   libsystem_pthread.dylib       	       0x187322c0c _pthread_start + 136
+10  libsystem_pthread.dylib       	       0x18731db80 thread_start + 8
+
+Thread 35:: ThreadPoolForegroundWorker
+0   libsystem_kernel.dylib        	       0x1872e0c34 mach_msg2_trap + 8
+1   libsystem_kernel.dylib        	       0x1872f33a0 mach_msg2_internal + 76
+2   libsystem_kernel.dylib        	       0x1872e9764 mach_msg_overwrite + 484
+3   libsystem_kernel.dylib        	       0x1872e0fa8 mach_msg + 24
+4   Google Chrome Framework       	       0x121fca31c ChromeMain + 8145908
+5   Google Chrome Framework       	       0x121fc7cc8 ChromeMain + 8136096
+6   Google Chrome Framework       	       0x121fc6f30 ChromeMain + 8132616
+7   Google Chrome Framework       	       0x121fc6e44 ChromeMain + 8132380
+8   Google Chrome Framework       	       0x122f17ee8 ChromeMain + 24192960
+9   libsystem_pthread.dylib       	       0x187322c0c _pthread_start + 136
+10  libsystem_pthread.dylib       	       0x18731db80 thread_start + 8
+
+Thread 36:: ThreadPoolForegroundWorker
+0   libsystem_kernel.dylib        	       0x1872e0c34 mach_msg2_trap + 8
+1   libsystem_kernel.dylib        	       0x1872f33a0 mach_msg2_internal + 76
+2   libsystem_kernel.dylib        	       0x1872e9764 mach_msg_overwrite + 484
+3   libsystem_kernel.dylib        	       0x1872e0fa8 mach_msg + 24
+4   Google Chrome Framework       	       0x121fca31c ChromeMain + 8145908
+5   Google Chrome Framework       	       0x121fc7cc8 ChromeMain + 8136096
+6   Google Chrome Framework       	       0x121fc6f30 ChromeMain + 8132616
+7   Google Chrome Framework       	       0x121fc6e44 ChromeMain + 8132380
+8   Google Chrome Framework       	       0x122f17ee8 ChromeMain + 24192960
+9   libsystem_pthread.dylib       	       0x187322c0c _pthread_start + 136
+10  libsystem_pthread.dylib       	       0x18731db80 thread_start + 8
+
+Thread 37:: com.apple.NSEventThread
+0   libsystem_kernel.dylib        	       0x1872e0c34 mach_msg2_trap + 8
+1   libsystem_kernel.dylib        	       0x1872f33a0 mach_msg2_internal + 76
+2   libsystem_kernel.dylib        	       0x1872e9764 mach_msg_overwrite + 484
+3   libsystem_kernel.dylib        	       0x1872e0fa8 mach_msg + 24
+4   CoreFoundation                	       0x18740de7c __CFRunLoopServiceMachPort + 160
+5   CoreFoundation                	       0x18740c798 __CFRunLoopRun + 1208
+6   CoreFoundation                	       0x18740bc58 CFRunLoopRunSpecific + 572
+7   AppKit                        	       0x18b4577fc _NSEventThread + 140
+8   libsystem_pthread.dylib       	       0x187322c0c _pthread_start + 136
+9   libsystem_pthread.dylib       	       0x18731db80 thread_start + 8
+
+Thread 38:: org.libusb.device-hotplug
+0   libsystem_kernel.dylib        	       0x1872e0c34 mach_msg2_trap + 8
+1   libsystem_kernel.dylib        	       0x1872f33a0 mach_msg2_internal + 76
+2   libsystem_kernel.dylib        	       0x1872e9764 mach_msg_overwrite + 484
+3   libsystem_kernel.dylib        	       0x1872e0fa8 mach_msg + 24
+4   CoreFoundation                	       0x18740de7c __CFRunLoopServiceMachPort + 160
+5   CoreFoundation                	       0x18740c798 __CFRunLoopRun + 1208
+6   CoreFoundation                	       0x18740bc58 CFRunLoopRunSpecific + 572
+7   CoreFoundation                	       0x187485714 CFRunLoopRun + 64
+8   Google Chrome Framework       	       0x1243c949c ChromeMain + 45890932
+9   libsystem_pthread.dylib       	       0x187322c0c _pthread_start + 136
+10  libsystem_pthread.dylib       	       0x18731db80 thread_start + 8
+
+Thread 39:: UsbEventHandler
+0   libsystem_kernel.dylib        	       0x1872e9498 poll + 8
+1   Google Chrome Framework       	       0x1240d8934 ChromeMain + 42807820
+2   Google Chrome Framework       	       0x1240d85f8 ChromeMain + 42806992
+3   Google Chrome Framework       	       0x122f17ee8 ChromeMain + 24192960
+4   libsystem_pthread.dylib       	       0x187322c0c _pthread_start + 136
+5   libsystem_pthread.dylib       	       0x18731db80 thread_start + 8
+
+Thread 40:
+0   libsystem_pthread.dylib       	       0x18731db6c start_wqthread + 0
+
+Thread 41:
+0   libsystem_pthread.dylib       	       0x18731db6c start_wqthread + 0
+
+Thread 42:
+0   libsystem_pthread.dylib       	       0x18731db6c start_wqthread + 0
+
+Thread 43:
+0   libsystem_pthread.dylib       	       0x18731db6c start_wqthread + 0
+
+
+Thread 0 crashed with ARM Thread State (64-bit):
+    x0: 0x0000000000000000   x1: 0x000000012ce55edc   x2: 0x000000012e06b6a8   x3: 0x0000000000000000
+    x4: 0x000000016fc608f0   x5: 0x000000016fc608e8   x6: 0x0000000000000000   x7: 0x0000000000041c00
+    x8: 0x0000000000000000   x9: 0x0000000000000000  x10: 0x000000012e4062c8  x11: 0x0000000000000008
+   x12: 0x000000000000000e  x13: 0x00000000000000ff  x14: 0xa7e9dca08eddddc4  x15: 0x4bab57dcabafdc32
+   x16: 0x00000001218400f0  x17: 0xffffffffffffffff  x18: 0x0000000000000000  x19: 0x0000012c073c6400
+   x20: 0x0000012c0a89b400  x21: 0x0000012c0c9aadf0  x22: 0xaaaaaaaaaaaaaa01  x23: 0x0000012800734d78
+   x24: 0x0000012c04108000  x25: 0x0000000000000000  x26: 0x0000000000000001  x27: 0x0000000000000001
+   x28: 0x000000016fc60e80   fp: 0x000000016fc60c60   lr: 0x000000012bc44478
+    sp: 0x000000016fc60c00   pc: 0x000000012bc44484 cpsr: 0x60001000
+   far: 0x0000000000000038  esr: 0x92000006 (Data Abort) byte read Translation fault
+
+Binary Images:
+       0x10019c000 -        0x10019ffff com.google.Chrome (141.0.7390.55) <4c4c443d-5555-3144-a13c-a6d122e74bce> /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+       0x121800000 -        0x12d77bfff com.google.Chrome.framework (141.0.7390.55) <4c4c442f-5555-3144-a194-758c1292b021> /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/141.0.7390.55/Google Chrome Framework
+       0x10aa44000 -        0x10aa4ffff libobjc-trampolines.dylib (*) <d02a05cb-6440-3e7e-a02f-931734cab666> /usr/lib/libobjc-trampolines.dylib
+       0x1151c0000 -        0x115857fff com.apple.AGXMetalG13X (327.5) <a459e0d8-5ddb-360f-817e-bc708b1711b0> /System/Library/Extensions/AGXMetalG13X.bundle/Contents/MacOS/AGXMetalG13X
+       0x139478000 -        0x139f23fff liboptimization_guide_internal.dylib (*) <4c4c4406-5555-3144-a1b9-3cc5009d46ec> /Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/141.0.7390.55/Libraries/liboptimization_guide_internal.dylib
+       0x120d44000 -        0x120d63fff com.apple.security.csparser (3.0) <c12848ee-0663-3987-842f-8832599d139f> /System/Library/Frameworks/Security.framework/Versions/A/PlugIns/csparser.bundle/Contents/MacOS/csparser
+       0x187391000 -        0x1878cffff com.apple.CoreFoundation (6.9) <df489a59-b4f6-32b8-9bb4-9b832960aa52> /System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
+       0x192ddd000 -        0x1930e3fdf com.apple.HIToolbox (2.1.1) <9286e29f-fcee-31d0-acea-2842ea23bedf> /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/HIToolbox
+       0x18b2f9000 -        0x18c78ac7f com.apple.AppKit (6.9) <5d0da1bd-412c-3ed8-84e9-40ca62fe7b42> /System/Library/Frameworks/AppKit.framework/Versions/C/AppKit
+       0x186f7c000 -        0x1870174cf dyld (*) <9cf0401a-a938-389e-a77d-9e9608076ccf> /usr/lib/dyld
+               0x0 - 0xffffffffffffffff ??? (*) <00000000-0000-0000-0000-000000000000> ???
+       0x1872e0000 -        0x18731b653 libsystem_kernel.dylib (*) <60485b6f-67e5-38c1-aec9-efd6031ff166> /usr/lib/system/libsystem_kernel.dylib
+       0x18731c000 -        0x187328a47 libsystem_pthread.dylib (*) <647b91fc-96d3-3bbb-af08-970df45257c8> /usr/lib/system/libsystem_pthread.dylib
+       0x188981000 -        0x18976a2ff com.apple.Foundation (6.9) <e8f6a451-0acc-3e05-b18f-fec6618ce44a> /System/Library/Frameworks/Foundation.framework/Versions/C/Foundation
+
+External Modification Summary:
+  Calls made by other processes targeting this process:
+    task_for_pid: 0
+    thread_create: 0
+    thread_set_state: 0
+  Calls made by this process:
+    task_for_pid: 0
+    thread_create: 0
+    thread_set_state: 0
+  Calls made by all processes on this machine:
+    task_for_pid: 2
+    thread_create: 0
+    thread_set_state: 64
+
+
+-----------
+Full Report
+-----------
+
+{"app_name":"Google Chrome","timestamp":"2025-10-07 16:03:15.00 +0200","app_version":"141.0.7390.55","slice_uuid":"4c4c443d-5555-3144-a13c-a6d122e74bce","build_version":"7390.55","platform":1,"bundleID":"com.google.Chrome","share_with_app_devs":0,"is_first_party":0,"bug_type":"309","os_version":"macOS 15.5 (24F74)","roots_installed":0,"name":"Google Chrome","incident_id":"81B801F4-8BA4-4DE9-9186-5D14AB37CE1B"}
+{
+  "uptime" : 1200000,
+  "procRole" : "Foreground",
+  "version" : 2,
+  "userID" : 501,
+  "deployVersion" : 210,
+  "modelCode" : "MacBookPro18,2",
+  "coalitionID" : 199405,
+  "osVersion" : {
+    "train" : "macOS 15.5",
+    "build" : "24F74",
+    "releaseType" : "User"
+  },
+  "captureTime" : "2025-10-07 16:03:14.6897 +0200",
+  "codeSigningMonitor" : 1,
+  "incident" : "81B801F4-8BA4-4DE9-9186-5D14AB37CE1B",
+  "pid" : 81175,
+  "translated" : false,
+  "cpuType" : "ARM-64",
+  "roots_installed" : 0,
+  "bug_type" : "309",
+  "procLaunch" : "2025-10-07 15:58:50.2421 +0200",
+  "procStartAbsTime" : 29669074360148,
+  "procExitAbsTime" : 29675420694007,
+  "procName" : "Google Chrome",
+  "procPath" : "\/Applications\/Google Chrome.app\/Contents\/MacOS\/Google Chrome",
+  "bundleInfo" : {"CFBundleShortVersionString":"141.0.7390.55","CFBundleVersion":"7390.55","CFBundleIdentifier":"com.google.Chrome"},
+  "storeInfo" : {"deviceIdentifierForVendor":"900B43C0-9165-5AA3-AAD6-B92D13C0336B","thirdParty":true},
+  "parentProc" : "launchd",
+  "parentPid" : 1,
+  "coalitionName" : "com.google.Chrome",
+  "crashReporterKey" : "9ACC9D10-BF3E-1513-3ED3-C3389E55CC00",
+  "appleIntelligenceStatus" : {"reasons":["siriAssetIsNotReady","notOptedIn","assetIsNotReady"],"state":"unavailable"},
+  "codeSigningID" : "com.google.Chrome",
+  "codeSigningTeamID" : "EQHXZ8M8AV",
+  "codeSigningFlags" : 570522369,
+  "codeSigningValidationCategory" : 6,
+  "codeSigningTrustLevel" : 4294967295,
+  "codeSigningAuxiliaryInfo" : 0,
+  "instructionByteStream" : {"beforePC":"\/YMBkfQDAarzAwCqgZAAsCFwO5GAIgCRQO4llAigANEfAADx6AOImg==","atPC":"AB1A+QgAQPkIBUD54QMUqgABP9ZADgC09QMAqggAQPkIFUD5AAE\/1g=="},
+  "bootSessionUUID" : "4F6B3B3E-B5D5-465C-8981-5402A0EC561F",
+  "wakeTime" : 13513,
+  "sleepWakeUUID" : "F942EE6D-B93D-4829-BC19-5F957BC14ED8",
+  "sip" : "enabled",
+  "vmRegionInfo" : "0x38 is not in any region.  Bytes before following region: 4296654792\n      REGION TYPE                    START - END         [ VSIZE] PRT\/MAX SHRMOD  REGION DETAIL\n      UNUSED SPACE AT START\n--->  \n      __TEXT                      10019c000-1001a0000    [   16K] r-x\/r-x SM=COW  \/Applications\/Google Chrome.app\/Contents\/MacOS\/Google Chrome",
+  "exception" : {"codes":"0x0000000000000001, 0x0000000000000038","rawCodes":[1,56],"type":"EXC_BAD_ACCESS","signal":"SIGSEGV","subtype":"KERN_INVALID_ADDRESS at 0x0000000000000038"},
+  "termination" : {"flags":0,"code":11,"namespace":"SIGNAL","indicator":"Segmentation fault: 11","byProc":"exc handler","byPid":81175},
+  "vmregioninfo" : "0x38 is not in any region.  Bytes before following region: 4296654792\n      REGION TYPE                    START - END         [ VSIZE] PRT\/MAX SHRMOD  REGION DETAIL\n      UNUSED SPACE AT START\n--->  \n      __TEXT                      10019c000-1001a0000    [   16K] r-x\/r-x SM=COW  \/Applications\/Google Chrome.app\/Contents\/MacOS\/Google Chrome",
+  "extMods" : {"caller":{"thread_create":0,"thread_set_state":0,"task_for_pid":0},"system":{"thread_create":0,"thread_set_state":64,"task_for_pid":2},"targeted":{"thread_create":0,"thread_set_state":0,"task_for_pid":0},"warnings":0},
+  "faultingThread" : 0,
+  "threads" : [{"threadState":{"x":[{"value":0},{"value":5048196828},{"value":5067159208},{"value":0},{"value":6170216688},{"value":6170216680},{"value":0},{"value":269312},{"value":0},{"value":0},{"value":5070938824},{"value":8},{"value":14},{"value":255},{"value":12099444456057331140},{"value":5452548379146968114},{"value":4857266416,"symbolLocation":240072,"symbol":"ChromeMain"},{"value":18446744073709551615},{"value":0},{"value":1288611587072},{"value":1288666985472},{"value":1288701652464},{"value":12297829382473034241},{"value":1271317876088},{"value":1288558379008},{"value":0},{"value":1},{"value":1},{"value":6170218112}],"flavor":"ARM_THREAD_STATE64","lr":{"value":5029250168},"cpsr":{"value":1610616832},"fp":{"value":6170217568},"sp":{"value":6170217472},"esr":{"value":2449473542,"description":"(Data Abort) byte read Translation fault"},"pc":{"value":5029250180,"matchesCrashFrame":1},"far":{"value":56}},"id":29996888,"triggered":true,"name":"CrBrowserMain","queue":"com.apple.main-thread","frames":[{"imageOffset":172246148,"symbol":"ChromeMain","symbolLocation":172223836,"imageIndex":1},{"imageOffset":172246036,"symbol":"ChromeMain","symbolLocation":172223724,"imageIndex":1},{"imageOffset":106525824,"symbol":"ChromeMain","symbolLocation":106503512,"imageIndex":1},{"imageOffset":1822664,"symbol":"ChromeMain","symbolLocation":1800352,"imageIndex":1},{"imageOffset":61285508,"symbol":"ChromeMain","symbolLocation":61263196,"imageIndex":1},{"imageOffset":1670668,"symbol":"ChromeMain","symbolLocation":1648356,"imageIndex":1},{"imageOffset":61284776,"symbol":"ChromeMain","symbolLocation":61262464,"imageIndex":1},{"imageOffset":511188,"symbol":"__CFRUNLOOP_IS_CALLING_OUT_TO_A_SOURCE0_PERFORM_FUNCTION__","symbolLocation":28,"imageIndex":6},{"imageOffset":511080,"symbol":"__CFRunLoopDoSource0","symbolLocation":172,"imageIndex":6},{"imageOffset":510420,"symbol":"__CFRunLoopDoSources0","symbolLocation":232,"imageIndex":6},{"imageOffset":505384,"symbol":"__CFRunLoopRun","symbolLocation":840,"imageIndex":6},{"imageOffset":502872,"symbol":"CFRunLoopRunSpecific","symbolLocation":572,"imageIndex":6},{"imageOffset":799356,"symbol":"RunCurrentEventLoopInMode","symbolLocation":324,"imageIndex":7},{"imageOffset":811804,"symbol":"ReceiveNextEventCommon","symbolLocation":216,"imageIndex":7},{"imageOffset":2430084,"symbol":"_BlockUntilNextEventMatchingListInModeWithFilter","symbolLocation":76,"imageIndex":7},{"imageOffset":240308,"symbol":"_DPSNextEvent","symbolLocation":684,"imageIndex":8},{"imageOffset":10327472,"symbol":"-[NSApplication(NSEventRouting) _nextEventMatchingEventMask:untilDate:inMode:dequeue:]","symbolLocation":688,"imageIndex":8},{"imageOffset":111586720,"symbol":"ChromeMain","symbolLocation":111564408,"imageIndex":1},{"imageOffset":1670668,"symbol":"ChromeMain","symbolLocation":1648356,"imageIndex":1},{"imageOffset":61046916,"symbol":"ChromeMain","symbolLocation":61024604,"imageIndex":1},{"imageOffset":187492,"symbol":"-[NSApplication run]","symbolLocation":480,"imageIndex":8},{"imageOffset":42171744,"symbol":"ChromeMain","symbolLocation":42149432,"imageIndex":1},{"imageOffset":42171296,"symbol":"ChromeMain","symbolLocation":42148984,"imageIndex":1},{"imageOffset":29148020,"symbol":"ChromeMain","symbolLocation":29125708,"imageIndex":1},{"imageOffset":34798792,"symbol":"ChromeMain","symbolLocation":34776480,"imageIndex":1},{"imageOffset":44118092,"symbol":"ChromeMain","symbolLocation":44095780,"imageIndex":1},{"imageOffset":44117392,"symbol":"ChromeMain","symbolLocation":44095080,"imageIndex":1},{"imageOffset":36558232,"symbol":"ChromeMain","symbolLocation":36535920,"imageIndex":1},{"imageOffset":25409128,"symbol":"ChromeMain","symbolLocation":25386816,"imageIndex":1},{"imageOffset":22876,"symbol":"ChromeMain","symbolLocation":564,"imageIndex":1},{"imageOffset":2140,"symbol":"main","symbolLocation":196,"imageIndex":0},{"imageOffset":27544,"symbol":"start","symbolLocation":6076,"imageIndex":9}]},{"id":29996899,"frames":[{"imageOffset":3124,"symbol":"mach_msg2_trap","symbolLocation":8,"imageIndex":11},{"imageOffset":78752,"symbol":"mach_msg2_internal","symbolLocation":76,"imageIndex":11},{"imageOffset":38756,"symbol":"mach_msg_overwrite","symbolLocation":484,"imageIndex":11},{"imageOffset":4008,"symbol":"mach_msg","symbolLocation":24,"imageIndex":11},{"imageOffset":47823312,"symbol":"ChromeMain","symbolLocation":47801000,"imageIndex":1},{"imageOffset":47822460,"symbol":"ChromeMain","symbolLocation":47800148,"imageIndex":1},{"imageOffset":170799476,"symbol":"ChromeMain","symbolLocation":170777164,"imageIndex":1},{"imageOffset":27660,"symbol":"_pthread_start","symbolLocation":136,"imageIndex":12},{"imageOffset":7040,"symbol":"thread_start","symbolLocation":8,"imageIndex":12}],"threadState":{"x":[{"value":268451845},{"value":17179869186},{"value":0},{"value":0},{"value":0},{"value":38495791874048},{"value":48},{"value":0},{"value":0},{"value":17179869184},{"value":48},{"value":0},{"value":0},{"value":0},{"value":8963},{"value":0},{"value":18446744073709551569},{"value":8426889272},{"value":0},{"value":0},{"value":48},{"value":38495791874048},{"value":0},{"value":0},{"value":4297146368},{"value":0},{"value":17179870210},{"value":18446744073709550527},{"value":1026}],"flavor":"ARM_THREAD_STATE64","lr":{"value":6562984864},"cpsr":{"value":4096},"fp":{"value":6171929296},"sp":{"value":6171929216},"esr":{"value":1442840704,"description":" Address size fault"},"pc":{"value":6562909236},"far":{"value":0}}},{"id":29996919,"name":"HangWatcher","threadState":{"x":[{"value":268451845},{"value":17179869442},{"value":0},{"value":140767553126400},{"value":0},{"value":140767553126400},{"value":32},{"value":10000},{"value":0},{"value":17179869184},{"value":32},{"value":0},{"value":0},{"value":0},{"value":32775},{"value":4899226052,"symbolLocation":42199708,"symbol":"ChromeMain"},{"value":18446744073709551569},{"value":1271310565376},{"value":0},{"value":10000},{"value":32},{"value":140767553126400},{"value":0},{"value":140767553126400},{"value":6181498512},{"value":0},{"value":17179870466},{"value":18446744073709550527},{"value":1282}],"flavor":"ARM_THREAD_STATE64","lr":{"value":6562984864},"cpsr":{"value":4096},"fp":{"value":6181497776},"sp":{"value":6181497696},"esr":{"value":1442840704,"description":" Address size fault"},"pc":{"value":6562909236},"far":{"value":0}},"frames":[{"imageOffset":3124,"symbol":"mach_msg2_trap","symbolLocation":8,"imageIndex":11},{"imageOffset":78752,"symbol":"mach_msg2_internal","symbolLocation":76,"imageIndex":11},{"imageOffset":38756,"symbol":"mach_msg_overwrite","symbolLocation":484,"imageIndex":11},{"imageOffset":4008,"symbol":"mach_msg","symbolLocation":24,"imageIndex":11},{"imageOffset":8168220,"symbol":"ChromeMain","symbolLocation":8145908,"imageIndex":1},{"imageOffset":114888144,"symbol":"ChromeMain","symbolLocation":114865832,"imageIndex":1},{"imageOffset":114888348,"symbol":"ChromeMain","symbolLocation":114866036,"imageIndex":1},{"imageOffset":24215272,"symbol":"ChromeMain","symbolLocation":24192960,"imageIndex":1},{"imageOffset":27660,"symbol":"_pthread_start","symbolLocation":136,"imageIndex":12},{"imageOffset":7040,"symbol":"thread_start","symbolLocation":8,"imageIndex":12}]},{"id":29996920,"name":"PerfettoTrace","threadState":{"x":[{"value":4},{"value":0},{"value":0},{"value":1271318231600},{"value":1},{"value":0},{"value":0},{"value":1873313359},{"value":0},{"value":0},{"value":34},{"value":1},{"value":1271310403192},{"value":1271319105536},{"value":18446744068639718143},{"value":3584},{"value":369},{"value":6189920256},{"value":0},{"value":1271317880352},{"value":1271312113280},{"value":1},{"value":1},{"value":0},{"value":1271318231600},{"value":1},{"value":12297829382473034411},{"value":1271312113544},{"value":1}],"flavor":"ARM_THREAD_STATE64","lr":{"value":4861687680},"cpsr":{"value":2684358656},"fp":{"value":6189919648},"sp":{"value":6189919392},"esr":{"value":1442840704,"description":" Address size fault"},"pc":{"value":6562957660},"far":{"value":0}},"frames":[{"imageOffset":51548,"symbol":"kevent64","symbolLocation":8,"imageIndex":11},{"imageOffset":4683648,"symbol":"ChromeMain","symbolLocation":4661336,"imageIndex":1},{"imageOffset":29148020,"symbol":"ChromeMain","symbolLocation":29125708,"imageIndex":1},{"imageOffset":34798792,"symbol":"ChromeMain","symbolLocation":34776480,"imageIndex":1},{"imageOffset":34192008,"symbol":"ChromeMain","symbolLocation":34169696,"imageIndex":1},{"imageOffset":34191384,"symbol":"ChromeMain","symbolLocation":34169072,"imageIndex":1},{"imageOffset":24215272,"symbol":"ChromeMain","symbolLocation":24192960,"imageIndex":1},{"imageOffset":27660,"symbol":"_pthread_start","symbolLocation":136,"imageIndex":12},{"imageOffset":7040,"symbol":"thread_start","symbolLocation":8,"imageIndex":12}]},{"id":29996921,"name":"ThreadPoolServiceThread","threadState":{"x":[{"value":4},{"value":0},{"value":0},{"value":1288492100160},{"value":6},{"value":0},{"value":0},{"value":1236474970262},{"value":0},{"value":0},{"value":392},{"value":1236474970250},{"value":1271310403416},{"value":1271319117824},{"value":14933078535860113213},{"value":1271310713408},{"value":369},{"value":6198341632},{"value":0},{"value":1271317879584},{"value":1271312113664},{"value":1},{"value":8000},{"value":0},{"value":1271318241344},{"value":1},{"value":12297829382473034411},{"value":1271312113928},{"value":1}],"flavor":"ARM_THREAD_STATE64","lr":{"value":4861687680},"cpsr":{"value":2684358656},"fp":{"value":6198341024},"sp":{"value":6198340768},"esr":{"value":1442840704,"description":" Address size fault"},"pc":{"value":6562957660},"far":{"value":0}},"frames":[{"imageOffset":51548,"symbol":"kevent64","symbolLocation":8,"imageIndex":11},{"imageOffset":4683648,"symbol":"ChromeMain","symbolLocation":4661336,"imageIndex":1},{"imageOffset":29148020,"symbol":"ChromeMain","symbolLocation":29125708,"imageIndex":1},{"imageOffset":34798792,"symbol":"ChromeMain","symbolLocation":34776480,"imageIndex":1},{"imageOffset":61265152,"symbol":"ChromeMain","symbolLocation":61242840,"imageIndex":1},{"imageOffset":34191384,"symbol":"ChromeMain","symbolLocation":34169072,"imageIndex":1},{"imageOffset":24215272,"symbol":"ChromeMain","symbolLocation":24192960,"imageIndex":1},{"imageOffset":27660,"symbol":"_pthread_start","symbolLocation":136,"imageIndex":12},{"imageOffset":7040,"symbol":"thread_start","symbolLocation":8,"imageIndex":12}]},{"id":29996922,"name":"ThreadPoolForegroundWorker","threadState":{"x":[{"value":268451845},{"value":17179869442},{"value":0},{"value":145148419768320},{"value":0},{"value":145148419768320},{"value":32},{"value":1423},{"value":0},{"value":17179869184},{"value":32},{"value":0},{"value":0},{"value":0},{"value":33795},{"value":70},{"value":18446744073709551569},{"value":1271319121920},{"value":0},{"value":1423},{"value":32},{"value":145148419768320},{"value":0},{"value":145148419768320},{"value":6206762624},{"value":0},{"value":17179870466},{"value":18446744073709550527},{"value":1282}],"flavor":"ARM_THREAD_STATE64","lr":{"value":6562984864},"cpsr":{"value":4096},"fp":{"value":6206761776},"sp":{"value":6206761696},"esr":{"value":1442840704,"description":" Address size fault"},"pc":{"value":6562909236},"far":{"value":0}},"frames":[{"imageOffset":3124,"symbol":"mach_msg2_trap","symbolLocation":8,"imageIndex":11},{"imageOffset":78752,"symbol":"mach_msg2_internal","symbolLocation":76,"imageIndex":11},{"imageOffset":38756,"symbol":"mach_msg_overwrite","symbolLocation":484,"imageIndex":11},{"imageOffset":4008,"symbol":"mach_msg","symbolLocation":24,"imageIndex":11},{"imageOffset":8157132,"symbol":"ChromeMain","symbolLocation":8134820,"imageIndex":1},{"imageOffset":8154928,"symbol":"ChromeMain","symbolLocation":8132616,"imageIndex":1},{"imageOffset":8154692,"symbol":"ChromeMain","symbolLocation":8132380,"imageIndex":1},{"imageOffset":24215272,"symbol":"ChromeMain","symbolLocation":24192960,"imageIndex":1},{"imageOffset":27660,"symbol":"_pthread_start","symbolLocation":136,"imageIndex":12},{"imageOffset":7040,"symbol":"thread_start","symbolLocation":8,"imageIndex":12}]},{"id":29996923,"name":"ThreadPoolBackgroundWorker","threadState":{"x":[{"value":268451845},{"value":17179869186},{"value":0},{"value":146247931396096},{"value":0},{"value":146247931396096},{"value":32},{"value":0},{"value":0},{"value":17179869184},{"value":32},{"value":0},{"value":0},{"value":0},{"value":34051},{"value":67903472},{"value":18446744073709551569},{"value":5068559632},{"value":0},{"value":0},{"value":32},{"value":146247931396096},{"value":0},{"value":146247931396096},{"value":6215183344},{"value":0},{"value":17179869186},{"value":18446744073709550527},{"value":2}],"flavor":"ARM_THREAD_STATE64","lr":{"value":6562984864},"cpsr":{"value":4096},"fp":{"value":6215182608},"sp":{"value":6215182528},"esr":{"value":1442840704,"description":" Address size fault"},"pc":{"value":6562909236},"far":{"value":0}},"frames":[{"imageOffset":3124,"symbol":"mach_msg2_trap","symbolLocation":8,"imageIndex":11},{"imageOffset":78752,"symbol":"mach_msg2_internal","symbolLocation":76,"imageIndex":11},{"imageOffset":38756,"symbol":"mach_msg_overwrite","symbolLocation":484,"imageIndex":11},{"imageOffset":4008,"symbol":"mach_msg","symbolLocation":24,"imageIndex":11},{"imageOffset":8168220,"symbol":"ChromeMain","symbolLocation":8145908,"imageIndex":1},{"imageOffset":8158408,"symbol":"ChromeMain","symbolLocation":8136096,"imageIndex":1},{"imageOffset":8154972,"symbol":"ChromeMain","symbolLocation":8132660,"imageIndex":1},{"imageOffset":8154780,"symbol":"ChromeMain","symbolLocation":8132468,"imageIndex":1},{"imageOffset":24215272,"symbol":"ChromeMain","symbolLocation":24192960,"imageIndex":1},{"imageOffset":27660,"symbol":"_pthread_start","symbolLocation":136,"imageIndex":12},{"imageOffset":7040,"symbol":"thread_start","symbolLocation":8,"imageIndex":12}]},{"id":29996924,"name":"ThreadPoolBackgroundWorker","threadState":{"x":[{"value":268451845},{"value":17179869186},{"value":0},{"value":149546466279424},{"value":0},{"value":149546466279424},{"value":32},{"value":0},{"value":0},{"value":17179869184},{"value":32},{"value":0},{"value":0},{"value":0},{"value":34819},{"value":35955328},{"value":18446744073709551569},{"value":4918267076,"symbolLocation":61240732,"symbol":"ChromeMain"},{"value":0},{"value":0},{"value":32},{"value":149546466279424},{"value":0},{"value":149546466279424},{"value":6223604720},{"value":0},{"value":17179869186},{"value":18446744073709550527},{"value":2}],"flavor":"ARM_THREAD_STATE64","lr":{"value":6562984864},"cpsr":{"value":4096},"fp":{"value":6223603984},"sp":{"value":6223603904},"esr":{"value":1442840704,"description":" Address size fault"},"pc":{"value":6562909236},"far":{"value":0}},"frames":[{"imageOffset":3124,"symbol":"mach_msg2_trap","symbolLocation":8,"imageIndex":11},{"imageOffset":78752,"symbol":"mach_msg2_internal","symbolLocation":76,"imageIndex":11},{"imageOffset":38756,"symbol":"mach_msg_overwrite","symbolLocation":484,"imageIndex":11},{"imageOffset":4008,"symbol":"mach_msg","symbolLocation":24,"imageIndex":11},{"imageOffset":8168220,"symbol":"ChromeMain","symbolLocation":8145908,"imageIndex":1},{"imageOffset":8158408,"symbol":"ChromeMain","symbolLocation":8136096,"imageIndex":1},{"imageOffset":8154972,"symbol":"ChromeMain","symbolLocation":8132660,"imageIndex":1},{"imageOffset":8154780,"symbol":"ChromeMain","symbolLocation":8132468,"imageIndex":1},{"imageOffset":24215272,"symbol":"ChromeMain","symbolLocation":24192960,"imageIndex":1},{"imageOffset":27660,"symbol":"_pthread_start","symbolLocation":136,"imageIndex":12},{"imageOffset":7040,"symbol":"thread_start","symbolLocation":8,"imageIndex":12}]},{"id":29996925,"name":"Chrome_IOThread","threadState":{"x":[{"value":1},{"value":0},{"value":0},{"value":1288493329280},{"value":19},{"value":0},{"value":0},{"value":6232023296},{"value":0},{"value":100000},{"value":9409},{"value":1236475379125},{"value":1271311220352},{"value":12297829382473034240},{"value":12297829382473034240},{"value":0},{"value":369},{"value":1271319134208},{"value":0},{"value":1271317878816},{"value":1271312115200},{"value":1},{"value":1},{"value":0},{"value":1271311220480},{"value":1},{"value":12297829382473034411},{"value":1271312115464},{"value":1}],"flavor":"ARM_THREAD_STATE64","lr":{"value":4861687680},"cpsr":{"value":2147487744},"fp":{"value":6232026512},"sp":{"value":6232026256},"esr":{"value":1442840704,"description":" Address size fault"},"pc":{"value":6562957660},"far":{"value":0}},"frames":[{"imageOffset":51548,"symbol":"kevent64","symbolLocation":8,"imageIndex":11},{"imageOffset":4683648,"symbol":"ChromeMain","symbolLocation":4661336,"imageIndex":1},{"imageOffset":29148020,"symbol":"ChromeMain","symbolLocation":29125708,"imageIndex":1},{"imageOffset":34798792,"symbol":"ChromeMain","symbolLocation":34776480,"imageIndex":1},{"imageOffset":60499988,"symbol":"ChromeMain","symbolLocation":60477676,"imageIndex":1},{"imageOffset":34191384,"symbol":"ChromeMain","symbolLocation":34169072,"imageIndex":1},{"imageOffset":24215272,"symbol":"ChromeMain","symbolLocation":24192960,"imageIndex":1},{"imageOffset":27660,"symbol":"_pthread_start","symbolLocation":136,"imageIndex":12},{"imageOffset":7040,"symbol":"thread_start","symbolLocation":8,"imageIndex":12}]},{"id":29996926,"name":"MemoryInfra","threadState":{"x":[{"value":268451845},{"value":17179869186},{"value":0},{"value":168238163951616},{"value":0},{"value":168238163951616},{"value":32},{"value":0},{"value":0},{"value":17179869184},{"value":32},{"value":0},{"value":0},{"value":0},{"value":39171},{"value":410},{"value":18446744073709551569},{"value":6240448512},{"value":0},{"value":0},{"value":32},{"value":168238163951616},{"value":0},{"value":168238163951616},{"value":6240447648},{"value":0},{"value":17179869186},{"value":18446744073709550527},{"value":2}],"flavor":"ARM_THREAD_STATE64","lr":{"value":6562984864},"cpsr":{"value":4096},"fp":{"value":6240446912},"sp":{"value":6240446832},"esr":{"value":1442840704,"description":" Address size fault"},"pc":{"value":6562909236},"far":{"value":0}},"frames":[{"imageOffset":3124,"symbol":"mach_msg2_trap","symbolLocation":8,"imageIndex":11},{"imageOffset":78752,"symbol":"mach_msg2_internal","symbolLocation":76,"imageIndex":11},{"imageOffset":38756,"symbol":"mach_msg_overwrite","symbolLocation":484,"imageIndex":11},{"imageOffset":4008,"symbol":"mach_msg","symbolLocation":24,"imageIndex":11},{"imageOffset":8168220,"symbol":"ChromeMain","symbolLocation":8145908,"imageIndex":1},{"imageOffset":61230172,"symbol":"ChromeMain","symbolLocation":61207860,"imageIndex":1},{"imageOffset":29148020,"symbol":"ChromeMain","symbolLocation":29125708,"imageIndex":1},{"imageOffset":34798792,"symbol":"ChromeMain","symbolLocation":34776480,"imageIndex":1},{"imageOffset":34192008,"symbol":"ChromeMain","symbolLocation":34169696,"imageIndex":1},{"imageOffset":34191384,"symbol":"ChromeMain","symbolLocation":34169072,"imageIndex":1},{"imageOffset":24215272,"symbol":"ChromeMain","symbolLocation":24192960,"imageIndex":1},{"imageOffset":27660,"symbol":"_pthread_start","symbolLocation":136,"imageIndex":12},{"imageOffset":7040,"symbol":"thread_start","symbolLocation":8,"imageIndex":12}]},{"id":29996930,"name":"NetworkConfigWatcher","threadState":{"x":[{"value":268451845},{"value":21592279046},{"value":8589934592},{"value":186929861623808},{"value":0},{"value":186929861623808},{"value":2},{"value":4294967295},{"value":0},{"value":17179869184},{"value":0},{"value":2},{"value":0},{"value":0},{"value":43523},{"value":0},{"value":18446744073709551569},{"value":8426890936},{"value":0},{"value":4294967295},{"value":2},{"value":186929861623808},{"value":0},{"value":186929861623808},{"value":6248865192},{"value":8589934592},{"value":21592279046},{"value":18446744073709550527},{"value":4412409862}],"flavor":"ARM_THREAD_STATE64","lr":{"value":6562984864},"cpsr":{"value":4096},"fp":{"value":6248865040},"sp":{"value":6248864960},"esr":{"value":1442840704,"description":" Address size fault"},"pc":{"value":6562909236},"far":{"value":0}},"frames":[{"imageOffset":3124,"symbol":"mach_msg2_trap","symbolLocation":8,"imageIndex":11},{"imageOffset":78752,"symbol":"mach_msg2_internal","symbolLocation":76,"imageIndex":11},{"imageOffset":38756,"symbol":"mach_msg_overwrite","symbolLocation":484,"imageIndex":11},{"imageOffset":4008,"symbol":"mach_msg","symbolLocation":24,"imageIndex":11},{"imageOffset":511612,"symbol":"__CFRunLoopServiceMachPort","symbolLocation":160,"imageIndex":6},{"imageOffset":505752,"symbol":"__CFRunLoopRun","symbolLocation":1208,"imageIndex":6},{"imageOffset":502872,"symbol":"CFRunLoopRunSpecific","symbolLocation":572,"imageIndex":6},{"imageOffset":367736,"symbol":"-[NSRunLoop(NSRunLoop) runMode:beforeDate:]","symbolLocation":212,"imageIndex":13},{"imageOffset":42171600,"symbol":"ChromeMain","symbolLocation":42149288,"imageIndex":1},{"imageOffset":42171296,"symbol":"ChromeMain","symbolLocation":42148984,"imageIndex":1},{"imageOffset":29148020,"symbol":"ChromeMain","symbolLocation":29125708,"imageIndex":1},{"imageOffset":34798792,"symbol":"ChromeMain","symbolLocation":34776480,"imageIndex":1},{"imageOffset":34192008,"symbol":"ChromeMain","symbolLocation":34169696,"imageIndex":1},{"imageOffset":34191384,"symbol":"ChromeMain","symbolLocation":34169072,"imageIndex":1},{"imageOffset":24215272,"symbol":"ChromeMain","symbolLocation":24192960,"imageIndex":1},{"imageOffset":27660,"symbol":"_pthread_start","symbolLocation":136,"imageIndex":12},{"imageOffset":7040,"symbol":"thread_start","symbolLocation":8,"imageIndex":12}]},{"id":29996931,"name":"CrShutdownDetector","threadState":{"x":[{"value":4},{"value":0},{"value":4},{"value":6257291363},{"value":6257290680},{"value":18},{"value":0},{"value":0},{"value":2863311530},{"value":8409826584,"symbolLocation":0,"symbol":"_current_pid"},{"value":8026668483491361347},{"value":2},{"value":16383},{"value":18446744073709551615},{"value":18446744068639718143},{"value":8409826692,"symbolLocation":0,"symbol":"vm_page_shift"},{"value":3},{"value":8426897704},{"value":0},{"value":1288490318416},{"value":4},{"value":0},{"value":6257291068},{"value":4},{"value":12297829382473034410},{"value":0},{"value":0},{"value":0},{"value":0}],"flavor":"ARM_THREAD_STATE64","lr":{"value":4970812636},"cpsr":{"value":1610616832},"fp":{"value":6257291120},"sp":{"value":6257290752},"esr":{"value":1442840704,"description":" Address size fault"},"pc":{"value":6562912220},"far":{"value":0}},"frames":[{"imageOffset":6108,"symbol":"read","symbolLocation":8,"imageIndex":11},{"imageOffset":113808604,"symbol":"ChromeMain","symbolLocation":113786292,"imageIndex":1},{"imageOffset":24215272,"symbol":"ChromeMain","symbolLocation":24192960,"imageIndex":1},{"imageOffset":27660,"symbol":"_pthread_start","symbolLocation":136,"imageIndex":12},{"imageOffset":7040,"symbol":"thread_start","symbolLocation":8,"imageIndex":12}]},{"id":29996939,"name":"NetworkConfigWatcher","threadState":{"x":[{"value":268451845},{"value":21592279046},{"value":8589934592},{"value":192427419762688},{"value":0},{"value":192427419762688},{"value":2},{"value":4294967295},{"value":0},{"value":17179869184},{"value":0},{"value":2},{"value":0},{"value":0},{"value":44803},{"value":0},{"value":18446744073709551569},{"value":8426890936},{"value":0},{"value":4294967295},{"value":2},{"value":192427419762688},{"value":0},{"value":192427419762688},{"value":6265707944},{"value":8589934592},{"value":21592279046},{"value":18446744073709550527},{"value":4412409862}],"flavor":"ARM_THREAD_STATE64","lr":{"value":6562984864},"cpsr":{"value":4096},"fp":{"value":6265707792},"sp":{"value":6265707712},"esr":{"value":1442840704,"description":" Address size fault"},"pc":{"value":6562909236},"far":{"value":0}},"frames":[{"imageOffset":3124,"symbol":"mach_msg2_trap","symbolLocation":8,"imageIndex":11},{"imageOffset":78752,"symbol":"mach_msg2_internal","symbolLocation":76,"imageIndex":11},{"imageOffset":38756,"symbol":"mach_msg_overwrite","symbolLocation":484,"imageIndex":11},{"imageOffset":4008,"symbol":"mach_msg","symbolLocation":24,"imageIndex":11},{"imageOffset":511612,"symbol":"__CFRunLoopServiceMachPort","symbolLocation":160,"imageIndex":6},{"imageOffset":505752,"symbol":"__CFRunLoopRun","symbolLocation":1208,"imageIndex":6},{"imageOffset":502872,"symbol":"CFRunLoopRunSpecific","symbolLocation":572,"imageIndex":6},{"imageOffset":367736,"symbol":"-[NSRunLoop(NSRunLoop) runMode:beforeDate:]","symbolLocation":212,"imageIndex":13},{"imageOffset":42171600,"symbol":"ChromeMain","symbolLocation":42149288,"imageIndex":1},{"imageOffset":42171296,"symbol":"ChromeMain","symbolLocation":42148984,"imageIndex":1},{"imageOffset":29148020,"symbol":"ChromeMain","symbolLocation":29125708,"imageIndex":1},{"imageOffset":34798792,"symbol":"ChromeMain","symbolLocation":34776480,"imageIndex":1},{"imageOffset":34192008,"symbol":"ChromeMain","symbolLocation":34169696,"imageIndex":1},{"imageOffset":34191384,"symbol":"ChromeMain","symbolLocation":34169072,"imageIndex":1},{"imageOffset":24215272,"symbol":"ChromeMain","symbolLocation":24192960,"imageIndex":1},{"imageOffset":27660,"symbol":"_pthread_start","symbolLocation":136,"imageIndex":12},{"imageOffset":7040,"symbol":"thread_start","symbolLocation":8,"imageIndex":12}]},{"id":29996940,"name":"ThreadPoolForegroundWorker","threadState":{"x":[{"value":268451845},{"value":17179869186},{"value":0},{"value":272691768590336},{"value":0},{"value":272691768590336},{"value":32},{"value":0},{"value":0},{"value":17179869184},{"value":32},{"value":0},{"value":0},{"value":0},{"value":63491},{"value":70724544},{"value":18446744073709551569},{"value":1288490577920},{"value":0},{"value":0},{"value":32},{"value":272691768590336},{"value":0},{"value":272691768590336},{"value":6274132976},{"value":0},{"value":17179869186},{"value":18446744073709550527},{"value":2}],"flavor":"ARM_THREAD_STATE64","lr":{"value":6562984864},"cpsr":{"value":4096},"fp":{"value":6274132240},"sp":{"value":6274132160},"esr":{"value":1442840704,"description":" Address size fault"},"pc":{"value":6562909236},"far":{"value":0}},"frames":[{"imageOffset":3124,"symbol":"mach_msg2_trap","symbolLocation":8,"imageIndex":11},{"imageOffset":78752,"symbol":"mach_msg2_internal","symbolLocation":76,"imageIndex":11},{"imageOffset":38756,"symbol":"mach_msg_overwrite","symbolLocation":484,"imageIndex":11},{"imageOffset":4008,"symbol":"mach_msg","symbolLocation":24,"imageIndex":11},{"imageOffset":8168220,"symbol":"ChromeMain","symbolLocation":8145908,"imageIndex":1},{"imageOffset":8158408,"symbol":"ChromeMain","symbolLocation":8136096,"imageIndex":1},{"imageOffset":8154928,"symbol":"ChromeMain","symbolLocation":8132616,"imageIndex":1},{"imageOffset":8154692,"symbol":"ChromeMain","symbolLocation":8132380,"imageIndex":1},{"imageOffset":24215272,"symbol":"ChromeMain","symbolLocation":24192960,"imageIndex":1},{"imageOffset":27660,"symbol":"_pthread_start","symbolLocation":136,"imageIndex":12},{"imageOffset":7040,"symbol":"thread_start","symbolLocation":8,"imageIndex":12}]},{"id":29996941,"name":"ThreadPoolForegroundWorker","threadState":{"x":[{"value":268451845},{"value":17179869186},{"value":0},{"value":195725954646016},{"value":0},{"value":195725954646016},{"value":32},{"value":0},{"value":0},{"value":17179869184},{"value":32},{"value":0},{"value":0},{"value":0},{"value":45571},{"value":4899226052,"symbolLocation":42199708,"symbol":"ChromeMain"},{"value":18446744073709551569},{"value":1288490573824},{"value":0},{"value":0},{"value":32},{"value":195725954646016},{"value":0},{"value":195725954646016},{"value":6282554352},{"value":0},{"value":17179869186},{"value":18446744073709550527},{"value":2}],"flavor":"ARM_THREAD_STATE64","lr":{"value":6562984864},"cpsr":{"value":4096},"fp":{"value":6282553616},"sp":{"value":6282553536},"esr":{"value":1442840704,"description":" Address size fault"},"pc":{"value":6562909236},"far":{"value":0}},"frames":[{"imageOffset":3124,"symbol":"mach_msg2_trap","symbolLocation":8,"imageIndex":11},{"imageOffset":78752,"symbol":"mach_msg2_internal","symbolLocation":76,"imageIndex":11},{"imageOffset":38756,"symbol":"mach_msg_overwrite","symbolLocation":484,"imageIndex":11},{"imageOffset":4008,"symbol":"mach_msg","symbolLocation":24,"imageIndex":11},{"imageOffset":8168220,"symbol":"ChromeMain","symbolLocation":8145908,"imageIndex":1},{"imageOffset":8158408,"symbol":"ChromeMain","symbolLocation":8136096,"imageIndex":1},{"imageOffset":8154928,"symbol":"ChromeMain","symbolLocation":8132616,"imageIndex":1},{"imageOffset":8154692,"symbol":"ChromeMain","symbolLocation":8132380,"imageIndex":1},{"imageOffset":24215272,"symbol":"ChromeMain","symbolLocation":24192960,"imageIndex":1},{"imageOffset":27660,"symbol":"_pthread_start","symbolLocation":136,"imageIndex":12},{"imageOffset":7040,"symbol":"thread_start","symbolLocation":8,"imageIndex":12}]},{"id":29996942,"name":"ThreadPoolForegroundWorker","threadState":{"x":[{"value":268451845},{"value":17179869186},{"value":0},{"value":271592256962560},{"value":0},{"value":271592256962560},{"value":32},{"value":0},{"value":0},{"value":17179869184},{"value":32},{"value":0},{"value":0},{"value":0},{"value":63235},{"value":4899226052,"symbolLocation":42199708,"symbol":"ChromeMain"},{"value":18446744073709551569},{"value":1288498642944},{"value":0},{"value":0},{"value":32},{"value":271592256962560},{"value":0},{"value":271592256962560},{"value":6290975728},{"value":0},{"value":17179869186},{"value":18446744073709550527},{"value":2}],"flavor":"ARM_THREAD_STATE64","lr":{"value":6562984864},"cpsr":{"value":4096},"fp":{"value":6290974992},"sp":{"value":6290974912},"esr":{"value":1442840704,"description":" Address size fault"},"pc":{"value":6562909236},"far":{"value":0}},"frames":[{"imageOffset":3124,"symbol":"mach_msg2_trap","symbolLocation":8,"imageIndex":11},{"imageOffset":78752,"symbol":"mach_msg2_internal","symbolLocation":76,"imageIndex":11},{"imageOffset":38756,"symbol":"mach_msg_overwrite","symbolLocation":484,"imageIndex":11},{"imageOffset":4008,"symbol":"mach_msg","symbolLocation":24,"imageIndex":11},{"imageOffset":8168220,"symbol":"ChromeMain","symbolLocation":8145908,"imageIndex":1},{"imageOffset":8158408,"symbol":"ChromeMain","symbolLocation":8136096,"imageIndex":1},{"imageOffset":8154928,"symbol":"ChromeMain","symbolLocation":8132616,"imageIndex":1},{"imageOffset":8154692,"symbol":"ChromeMain","symbolLocation":8132380,"imageIndex":1},{"imageOffset":24215272,"symbol":"ChromeMain","symbolLocation":24192960,"imageIndex":1},{"imageOffset":27660,"symbol":"_pthread_start","symbolLocation":136,"imageIndex":12},{"imageOffset":7040,"symbol":"thread_start","symbolLocation":8,"imageIndex":12}]},{"id":29996943,"name":"ThreadPoolForegroundWorker","threadState":{"x":[{"value":268451845},{"value":17179869186},{"value":0},{"value":197924977901568},{"value":0},{"value":197924977901568},{"value":32},{"value":0},{"value":0},{"value":17179869184},{"value":32},{"value":0},{"value":0},{"value":0},{"value":46083},{"value":4729344},{"value":18446744073709551569},{"value":8426889296},{"value":0},{"value":0},{"value":32},{"value":197924977901568},{"value":0},{"value":197924977901568},{"value":6299397104},{"value":0},{"value":17179869186},{"value":18446744073709550527},{"value":2}],"flavor":"ARM_THREAD_STATE64","lr":{"value":6562984864},"cpsr":{"value":4096},"fp":{"value":6299396368},"sp":{"value":6299396288},"esr":{"value":1442840704,"description":" Address size fault"},"pc":{"value":6562909236},"far":{"value":0}},"frames":[{"imageOffset":3124,"symbol":"mach_msg2_trap","symbolLocation":8,"imageIndex":11},{"imageOffset":78752,"symbol":"mach_msg2_internal","symbolLocation":76,"imageIndex":11},{"imageOffset":38756,"symbol":"mach_msg_overwrite","symbolLocation":484,"imageIndex":11},{"imageOffset":4008,"symbol":"mach_msg","symbolLocation":24,"imageIndex":11},{"imageOffset":8168220,"symbol":"ChromeMain","symbolLocation":8145908,"imageIndex":1},{"imageOffset":8158408,"symbol":"ChromeMain","symbolLocation":8136096,"imageIndex":1},{"imageOffset":8154928,"symbol":"ChromeMain","symbolLocation":8132616,"imageIndex":1},{"imageOffset":8154692,"symbol":"ChromeMain","symbolLocation":8132380,"imageIndex":1},{"imageOffset":24215272,"symbol":"ChromeMain","symbolLocation":24192960,"imageIndex":1},{"imageOffset":27660,"symbol":"_pthread_start","symbolLocation":136,"imageIndex":12},{"imageOffset":7040,"symbol":"thread_start","symbolLocation":8,"imageIndex":12}]},{"id":29996944,"name":"ThreadPoolForegroundWorker","threadState":{"x":[{"value":268451845},{"value":17179869186},{"value":0},{"value":266094698823680},{"value":0},{"value":266094698823680},{"value":32},{"value":0},{"value":0},{"value":17179869184},{"value":32},{"value":0},{"value":0},{"value":0},{"value":61955},{"value":4770304},{"value":18446744073709551569},{"value":1288498659328},{"value":0},{"value":0},{"value":32},{"value":266094698823680},{"value":0},{"value":266094698823680},{"value":6307818480},{"value":0},{"value":17179869186},{"value":18446744073709550527},{"value":2}],"flavor":"ARM_THREAD_STATE64","lr":{"value":6562984864},"cpsr":{"value":4096},"fp":{"value":6307817744},"sp":{"value":6307817664},"esr":{"value":1442840704,"description":" Address size fault"},"pc":{"value":6562909236},"far":{"value":0}},"frames":[{"imageOffset":3124,"symbol":"mach_msg2_trap","symbolLocation":8,"imageIndex":11},{"imageOffset":78752,"symbol":"mach_msg2_internal","symbolLocation":76,"imageIndex":11},{"imageOffset":38756,"symbol":"mach_msg_overwrite","symbolLocation":484,"imageIndex":11},{"imageOffset":4008,"symbol":"mach_msg","symbolLocation":24,"imageIndex":11},{"imageOffset":8168220,"symbol":"ChromeMain","symbolLocation":8145908,"imageIndex":1},{"imageOffset":8158408,"symbol":"ChromeMain","symbolLocation":8136096,"imageIndex":1},{"imageOffset":8154928,"symbol":"ChromeMain","symbolLocation":8132616,"imageIndex":1},{"imageOffset":8154692,"symbol":"ChromeMain","symbolLocation":8132380,"imageIndex":1},{"imageOffset":24215272,"symbol":"ChromeMain","symbolLocation":24192960,"imageIndex":1},{"imageOffset":27660,"symbol":"_pthread_start","symbolLocation":136,"imageIndex":12},{"imageOffset":7040,"symbol":"thread_start","symbolLocation":8,"imageIndex":12}]},{"id":29996945,"name":"ThreadPoolForegroundWorker","threadState":{"x":[{"value":268451845},{"value":17179869186},{"value":0},{"value":267194210451456},{"value":0},{"value":267194210451456},{"value":32},{"value":0},{"value":0},{"value":17179869184},{"value":32},{"value":0},{"value":0},{"value":0},{"value":62211},{"value":4734464},{"value":18446744073709551569},{"value":8426889304},{"value":0},{"value":0},{"value":32},{"value":267194210451456},{"value":0},{"value":267194210451456},{"value":6316239856},{"value":0},{"value":17179869186},{"value":18446744073709550527},{"value":2}],"flavor":"ARM_THREAD_STATE64","lr":{"value":6562984864},"cpsr":{"value":4096},"fp":{"value":6316239120},"sp":{"value":6316239040},"esr":{"value":1442840704,"description":" Address size fault"},"pc":{"value":6562909236},"far":{"value":0}},"frames":[{"imageOffset":3124,"symbol":"mach_msg2_trap","symbolLocation":8,"imageIndex":11},{"imageOffset":78752,"symbol":"mach_msg2_internal","symbolLocation":76,"imageIndex":11},{"imageOffset":38756,"symbol":"mach_msg_overwrite","symbolLocation":484,"imageIndex":11},{"imageOffset":4008,"symbol":"mach_msg","symbolLocation":24,"imageIndex":11},{"imageOffset":8168220,"symbol":"ChromeMain","symbolLocation":8145908,"imageIndex":1},{"imageOffset":8158408,"symbol":"ChromeMain","symbolLocation":8136096,"imageIndex":1},{"imageOffset":8154928,"symbol":"ChromeMain","symbolLocation":8132616,"imageIndex":1},{"imageOffset":8154692,"symbol":"ChromeMain","symbolLocation":8132380,"imageIndex":1},{"imageOffset":24215272,"symbol":"ChromeMain","symbolLocation":24192960,"imageIndex":1},{"imageOffset":27660,"symbol":"_pthread_start","symbolLocation":136,"imageIndex":12},{"imageOffset":7040,"symbol":"thread_start","symbolLocation":8,"imageIndex":12}]},{"id":29996946,"name":"NetworkNotificationThreadMac","threadState":{"x":[{"value":268451845},{"value":21592279046},{"value":8589934592},{"value":260597140684800},{"value":0},{"value":260597140684800},{"value":2},{"value":4294967295},{"value":0},{"value":17179869184},{"value":0},{"value":2},{"value":0},{"value":0},{"value":60675},{"value":0},{"value":18446744073709551569},{"value":8426890936},{"value":0},{"value":4294967295},{"value":2},{"value":260597140684800},{"value":0},{"value":260597140684800},{"value":6324657576},{"value":8589934592},{"value":21592279046},{"value":18446744073709550527},{"value":4412409862}],"flavor":"ARM_THREAD_STATE64","lr":{"value":6562984864},"cpsr":{"value":4096},"fp":{"value":6324657424},"sp":{"value":6324657344},"esr":{"value":1442840704,"description":" Address size fault"},"pc":{"value":6562909236},"far":{"value":0}},"frames":[{"imageOffset":3124,"symbol":"mach_msg2_trap","symbolLocation":8,"imageIndex":11},{"imageOffset":78752,"symbol":"mach_msg2_internal","symbolLocation":76,"imageIndex":11},{"imageOffset":38756,"symbol":"mach_msg_overwrite","symbolLocation":484,"imageIndex":11},{"imageOffset":4008,"symbol":"mach_msg","symbolLocation":24,"imageIndex":11},{"imageOffset":511612,"symbol":"__CFRunLoopServiceMachPort","symbolLocation":160,"imageIndex":6},{"imageOffset":505752,"symbol":"__CFRunLoopRun","symbolLocation":1208,"imageIndex":6},{"imageOffset":502872,"symbol":"CFRunLoopRunSpecific","symbolLocation":572,"imageIndex":6},{"imageOffset":367736,"symbol":"-[NSRunLoop(NSRunLoop) runMode:beforeDate:]","symbolLocation":212,"imageIndex":13},{"imageOffset":42171600,"symbol":"ChromeMain","symbolLocation":42149288,"imageIndex":1},{"imageOffset":42171296,"symbol":"ChromeMain","symbolLocation":42148984,"imageIndex":1},{"imageOffset":29148020,"symbol":"ChromeMain","symbolLocation":29125708,"imageIndex":1},{"imageOffset":34798792,"symbol":"ChromeMain","symbolLocation":34776480,"imageIndex":1},{"imageOffset":34192008,"symbol":"ChromeMain","symbolLocation":34169696,"imageIndex":1},{"imageOffset":34191384,"symbol":"ChromeMain","symbolLocation":34169072,"imageIndex":1},{"imageOffset":24215272,"symbol":"ChromeMain","symbolLocation":24192960,"imageIndex":1},{"imageOffset":27660,"symbol":"_pthread_start","symbolLocation":136,"imageIndex":12},{"imageOffset":7040,"symbol":"thread_start","symbolLocation":8,"imageIndex":12}]},{"id":29996947,"name":"ThreadPoolSingleThreadForegroundBlocking0","threadState":{"x":[{"value":268451845},{"value":17179869186},{"value":0},{"value":210019605807104},{"value":0},{"value":210019605807104},{"value":32},{"value":0},{"value":0},{"value":17179869184},{"value":32},{"value":0},{"value":0},{"value":0},{"value":48899},{"value":4731392},{"value":18446744073709551569},{"value":1288498671616},{"value":0},{"value":0},{"value":32},{"value":210019605807104},{"value":0},{"value":210019605807104},{"value":6333082608},{"value":0},{"value":17179869186},{"value":18446744073709550527},{"value":2}],"flavor":"ARM_THREAD_STATE64","lr":{"value":6562984864},"cpsr":{"value":4096},"fp":{"value":6333081872},"sp":{"value":6333081792},"esr":{"value":1442840704,"description":" Address size fault"},"pc":{"value":6562909236},"far":{"value":0}},"frames":[{"imageOffset":3124,"symbol":"mach_msg2_trap","symbolLocation":8,"imageIndex":11},{"imageOffset":78752,"symbol":"mach_msg2_internal","symbolLocation":76,"imageIndex":11},{"imageOffset":38756,"symbol":"mach_msg_overwrite","symbolLocation":484,"imageIndex":11},{"imageOffset":4008,"symbol":"mach_msg","symbolLocation":24,"imageIndex":11},{"imageOffset":8168220,"symbol":"ChromeMain","symbolLocation":8145908,"imageIndex":1},{"imageOffset":8158408,"symbol":"ChromeMain","symbolLocation":8136096,"imageIndex":1},{"imageOffset":8155104,"symbol":"ChromeMain","symbolLocation":8132792,"imageIndex":1},{"imageOffset":8154856,"symbol":"ChromeMain","symbolLocation":8132544,"imageIndex":1},{"imageOffset":24215272,"symbol":"ChromeMain","symbolLocation":24192960,"imageIndex":1},{"imageOffset":27660,"symbol":"_pthread_start","symbolLocation":136,"imageIndex":12},{"imageOffset":7040,"symbol":"thread_start","symbolLocation":8,"imageIndex":12}]},{"id":29996948,"name":"CacheThread_BlockFile","threadState":{"x":[{"value":4},{"value":0},{"value":0},{"value":1288491694992},{"value":2},{"value":0},{"value":0},{"value":1236452049064},{"value":0},{"value":0},{"value":23470},{"value":1236452049000},{"value":16383},{"value":18446744073709551615},{"value":18446744068639718143},{"value":1288497700288},{"value":369},{"value":6341505024},{"value":0},{"value":1288491836640},{"value":1288491779968},{"value":1},{"value":8000},{"value":0},{"value":1288498150528},{"value":1},{"value":12297829382473034411},{"value":1288491780232},{"value":1}],"flavor":"ARM_THREAD_STATE64","lr":{"value":4861687680},"cpsr":{"value":2684358656},"fp":{"value":6341504416},"sp":{"value":6341504160},"esr":{"value":1442840704,"description":" Address size fault"},"pc":{"value":6562957660},"far":{"value":0}},"frames":[{"imageOffset":51548,"symbol":"kevent64","symbolLocation":8,"imageIndex":11},{"imageOffset":4683648,"symbol":"ChromeMain","symbolLocation":4661336,"imageIndex":1},{"imageOffset":29148020,"symbol":"ChromeMain","symbolLocation":29125708,"imageIndex":1},{"imageOffset":34798792,"symbol":"ChromeMain","symbolLocation":34776480,"imageIndex":1},{"imageOffset":34192008,"symbol":"ChromeMain","symbolLocation":34169696,"imageIndex":1},{"imageOffset":34191384,"symbol":"ChromeMain","symbolLocation":34169072,"imageIndex":1},{"imageOffset":24215272,"symbol":"ChromeMain","symbolLocation":24192960,"imageIndex":1},{"imageOffset":27660,"symbol":"_pthread_start","symbolLocation":136,"imageIndex":12},{"imageOffset":7040,"symbol":"thread_start","symbolLocation":8,"imageIndex":12}]},{"id":29996949,"name":"CompositorTileWorker1","threadState":{"x":[{"value":260},{"value":0},{"value":280576},{"value":0},{"value":0},{"value":161},{"value":0},{"value":0},{"value":6349925944},{"value":0},{"value":8192},{"value":35184372097026},{"value":35184372097026},{"value":8192},{"value":0},{"value":35184372097024},{"value":305},{"value":8426889056},{"value":0},{"value":1288494063512},{"value":1288494063640},{"value":6349926624},{"value":0},{"value":0},{"value":280576},{"value":280577},{"value":280832},{"value":0},{"value":0}],"flavor":"ARM_THREAD_STATE64","lr":{"value":6563180768},"cpsr":{"value":1610616832},"fp":{"value":6349926064},"sp":{"value":6349925920},"esr":{"value":1442840704,"description":" Address size fault"},"pc":{"value":6562923468},"far":{"value":0}},"frames":[{"imageOffset":17356,"symbol":"__psynch_cvwait","symbolLocation":8,"imageIndex":11},{"imageOffset":28896,"symbol":"_pthread_cond_wait","symbolLocation":984,"imageIndex":12},{"imageOffset":15750072,"symbol":"ChromeMain","symbolLocation":15727760,"imageIndex":1},{"imageOffset":20490948,"symbol":"ChromeMain","symbolLocation":20468636,"imageIndex":1},{"imageOffset":24215272,"symbol":"ChromeMain","symbolLocation":24192960,"imageIndex":1},{"imageOffset":27660,"symbol":"_pthread_start","symbolLocation":136,"imageIndex":12},{"imageOffset":7040,"symbol":"thread_start","symbolLocation":8,"imageIndex":12}]},{"id":29996980,"name":"NetworkConfigWatcher","threadState":{"x":[{"value":268451845},{"value":21592279046},{"value":8589934592},{"value":362851722067968},{"value":0},{"value":362851722067968},{"value":2},{"value":4294967295},{"value":0},{"value":17179869184},{"value":0},{"value":2},{"value":0},{"value":0},{"value":84483},{"value":0},{"value":18446744073709551569},{"value":8426890936},{"value":0},{"value":4294967295},{"value":2},{"value":362851722067968},{"value":0},{"value":362851722067968},{"value":6358343080},{"value":8589934592},{"value":21592279046},{"value":18446744073709550527},{"value":4412409862}],"flavor":"ARM_THREAD_STATE64","lr":{"value":6562984864},"cpsr":{"value":4096},"fp":{"value":6358342928},"sp":{"value":6358342848},"esr":{"value":1442840704,"description":" Address size fault"},"pc":{"value":6562909236},"far":{"value":0}},"frames":[{"imageOffset":3124,"symbol":"mach_msg2_trap","symbolLocation":8,"imageIndex":11},{"imageOffset":78752,"symbol":"mach_msg2_internal","symbolLocation":76,"imageIndex":11},{"imageOffset":38756,"symbol":"mach_msg_overwrite","symbolLocation":484,"imageIndex":11},{"imageOffset":4008,"symbol":"mach_msg","symbolLocation":24,"imageIndex":11},{"imageOffset":511612,"symbol":"__CFRunLoopServiceMachPort","symbolLocation":160,"imageIndex":6},{"imageOffset":505752,"symbol":"__CFRunLoopRun","symbolLocation":1208,"imageIndex":6},{"imageOffset":502872,"symbol":"CFRunLoopRunSpecific","symbolLocation":572,"imageIndex":6},{"imageOffset":367736,"symbol":"-[NSRunLoop(NSRunLoop) runMode:beforeDate:]","symbolLocation":212,"imageIndex":13},{"imageOffset":42171600,"symbol":"ChromeMain","symbolLocation":42149288,"imageIndex":1},{"imageOffset":42171296,"symbol":"ChromeMain","symbolLocation":42148984,"imageIndex":1},{"imageOffset":29148020,"symbol":"ChromeMain","symbolLocation":29125708,"imageIndex":1},{"imageOffset":34798792,"symbol":"ChromeMain","symbolLocation":34776480,"imageIndex":1},{"imageOffset":34192008,"symbol":"ChromeMain","symbolLocation":34169696,"imageIndex":1},{"imageOffset":34191384,"symbol":"ChromeMain","symbolLocation":34169072,"imageIndex":1},{"imageOffset":24215272,"symbol":"ChromeMain","symbolLocation":24192960,"imageIndex":1},{"imageOffset":27660,"symbol":"_pthread_start","symbolLocation":136,"imageIndex":12},{"imageOffset":7040,"symbol":"thread_start","symbolLocation":8,"imageIndex":12}]},{"id":29996981,"name":"ThreadPoolForegroundWorker","threadState":{"x":[{"value":268451845},{"value":17179869186},{"value":0},{"value":361752210440192},{"value":0},{"value":361752210440192},{"value":32},{"value":0},{"value":0},{"value":17179869184},{"value":32},{"value":0},{"value":0},{"value":0},{"value":84227},{"value":32129888},{"value":18446744073709551569},{"value":1288519446528},{"value":0},{"value":0},{"value":32},{"value":361752210440192},{"value":0},{"value":361752210440192},{"value":6366768112},{"value":0},{"value":17179869186},{"value":18446744073709550527},{"value":2}],"flavor":"ARM_THREAD_STATE64","lr":{"value":6562984864},"cpsr":{"value":4096},"fp":{"value":6366767376},"sp":{"value":6366767296},"esr":{"value":1442840704,"description":" Address size fault"},"pc":{"value":6562909236},"far":{"value":0}},"frames":[{"imageOffset":3124,"symbol":"mach_msg2_trap","symbolLocation":8,"imageIndex":11},{"imageOffset":78752,"symbol":"mach_msg2_internal","symbolLocation":76,"imageIndex":11},{"imageOffset":38756,"symbol":"mach_msg_overwrite","symbolLocation":484,"imageIndex":11},{"imageOffset":4008,"symbol":"mach_msg","symbolLocation":24,"imageIndex":11},{"imageOffset":8168220,"symbol":"ChromeMain","symbolLocation":8145908,"imageIndex":1},{"imageOffset":8158408,"symbol":"ChromeMain","symbolLocation":8136096,"imageIndex":1},{"imageOffset":8154928,"symbol":"ChromeMain","symbolLocation":8132616,"imageIndex":1},{"imageOffset":8154692,"symbol":"ChromeMain","symbolLocation":8132380,"imageIndex":1},{"imageOffset":24215272,"symbol":"ChromeMain","symbolLocation":24192960,"imageIndex":1},{"imageOffset":27660,"symbol":"_pthread_start","symbolLocation":136,"imageIndex":12},{"imageOffset":7040,"symbol":"thread_start","symbolLocation":8,"imageIndex":12}]},{"id":29996982,"name":"ThreadPoolSingleThreadForegroundBlocking1","threadState":{"x":[{"value":268451845},{"value":17179869186},{"value":0},{"value":359553187184640},{"value":0},{"value":359553187184640},{"value":32},{"value":0},{"value":0},{"value":17179869184},{"value":32},{"value":0},{"value":0},{"value":0},{"value":83715},{"value":436608},{"value":18446744073709551569},{"value":1288519450624},{"value":0},{"value":0},{"value":32},{"value":359553187184640},{"value":0},{"value":359553187184640},{"value":6375189488},{"value":0},{"value":17179869186},{"value":18446744073709550527},{"value":2}],"flavor":"ARM_THREAD_STATE64","lr":{"value":6562984864},"cpsr":{"value":4096},"fp":{"value":6375188752},"sp":{"value":6375188672},"esr":{"value":1442840704,"description":" Address size fault"},"pc":{"value":6562909236},"far":{"value":0}},"frames":[{"imageOffset":3124,"symbol":"mach_msg2_trap","symbolLocation":8,"imageIndex":11},{"imageOffset":78752,"symbol":"mach_msg2_internal","symbolLocation":76,"imageIndex":11},{"imageOffset":38756,"symbol":"mach_msg_overwrite","symbolLocation":484,"imageIndex":11},{"imageOffset":4008,"symbol":"mach_msg","symbolLocation":24,"imageIndex":11},{"imageOffset":8168220,"symbol":"ChromeMain","symbolLocation":8145908,"imageIndex":1},{"imageOffset":8158408,"symbol":"ChromeMain","symbolLocation":8136096,"imageIndex":1},{"imageOffset":8155104,"symbol":"ChromeMain","symbolLocation":8132792,"imageIndex":1},{"imageOffset":8154856,"symbol":"ChromeMain","symbolLocation":8132544,"imageIndex":1},{"imageOffset":24215272,"symbol":"ChromeMain","symbolLocation":24192960,"imageIndex":1},{"imageOffset":27660,"symbol":"_pthread_start","symbolLocation":136,"imageIndex":12},{"imageOffset":7040,"symbol":"thread_start","symbolLocation":8,"imageIndex":12}]},{"id":29996983,"name":"ThreadPoolForegroundWorker","threadState":{"x":[{"value":268451845},{"value":17179869186},{"value":0},{"value":296898204270592},{"value":0},{"value":296898204270592},{"value":32},{"value":0},{"value":0},{"value":17179869184},{"value":32},{"value":0},{"value":0},{"value":0},{"value":69127},{"value":52494336},{"value":18446744073709551569},{"value":1288519462912},{"value":0},{"value":0},{"value":32},{"value":296898204270592},{"value":0},{"value":296898204270592},{"value":6383610864},{"value":0},{"value":17179869186},{"value":18446744073709550527},{"value":2}],"flavor":"ARM_THREAD_STATE64","lr":{"value":6562984864},"cpsr":{"value":4096},"fp":{"value":6383610128},"sp":{"value":6383610048},"esr":{"value":1442840704,"description":" Address size fault"},"pc":{"value":6562909236},"far":{"value":0}},"frames":[{"imageOffset":3124,"symbol":"mach_msg2_trap","symbolLocation":8,"imageIndex":11},{"imageOffset":78752,"symbol":"mach_msg2_internal","symbolLocation":76,"imageIndex":11},{"imageOffset":38756,"symbol":"mach_msg_overwrite","symbolLocation":484,"imageIndex":11},{"imageOffset":4008,"symbol":"mach_msg","symbolLocation":24,"imageIndex":11},{"imageOffset":8168220,"symbol":"ChromeMain","symbolLocation":8145908,"imageIndex":1},{"imageOffset":8158408,"symbol":"ChromeMain","symbolLocation":8136096,"imageIndex":1},{"imageOffset":8154928,"symbol":"ChromeMain","symbolLocation":8132616,"imageIndex":1},{"imageOffset":8154692,"symbol":"ChromeMain","symbolLocation":8132380,"imageIndex":1},{"imageOffset":24215272,"symbol":"ChromeMain","symbolLocation":24192960,"imageIndex":1},{"imageOffset":27660,"symbol":"_pthread_start","symbolLocation":136,"imageIndex":12},{"imageOffset":7040,"symbol":"thread_start","symbolLocation":8,"imageIndex":12}]},{"id":29996984,"name":"ThreadPoolSingleThreadSharedForeground2","threadState":{"x":[{"value":268451845},{"value":17179869186},{"value":0},{"value":297997715898368},{"value":0},{"value":297997715898368},{"value":32},{"value":0},{"value":0},{"value":17179869184},{"value":32},{"value":0},{"value":0},{"value":0},{"value":69383},{"value":35951584},{"value":18446744073709551569},{"value":1288519471104},{"value":0},{"value":0},{"value":32},{"value":297997715898368},{"value":0},{"value":297997715898368},{"value":6392032240},{"value":0},{"value":17179869186},{"value":18446744073709550527},{"value":2}],"flavor":"ARM_THREAD_STATE64","lr":{"value":6562984864},"cpsr":{"value":4096},"fp":{"value":6392031504},"sp":{"value":6392031424},"esr":{"value":1442840704,"description":" Address size fault"},"pc":{"value":6562909236},"far":{"value":0}},"frames":[{"imageOffset":3124,"symbol":"mach_msg2_trap","symbolLocation":8,"imageIndex":11},{"imageOffset":78752,"symbol":"mach_msg2_internal","symbolLocation":76,"imageIndex":11},{"imageOffset":38756,"symbol":"mach_msg_overwrite","symbolLocation":484,"imageIndex":11},{"imageOffset":4008,"symbol":"mach_msg","symbolLocation":24,"imageIndex":11},{"imageOffset":8168220,"symbol":"ChromeMain","symbolLocation":8145908,"imageIndex":1},{"imageOffset":8158408,"symbol":"ChromeMain","symbolLocation":8136096,"imageIndex":1},{"imageOffset":8155016,"symbol":"ChromeMain","symbolLocation":8132704,"imageIndex":1},{"imageOffset":8154800,"symbol":"ChromeMain","symbolLocation":8132488,"imageIndex":1},{"imageOffset":24215272,"symbol":"ChromeMain","symbolLocation":24192960,"imageIndex":1},{"imageOffset":27660,"symbol":"_pthread_start","symbolLocation":136,"imageIndex":12},{"imageOffset":7040,"symbol":"thread_start","symbolLocation":8,"imageIndex":12}]},{"id":29996985,"name":"ThreadPoolForegroundWorker","threadState":{"x":[{"value":268451845},{"value":17179869186},{"value":0},{"value":356254652301312},{"value":0},{"value":356254652301312},{"value":32},{"value":0},{"value":0},{"value":17179869184},{"value":32},{"value":0},{"value":0},{"value":0},{"value":82947},{"value":4735488},{"value":18446744073709551569},{"value":1288519467008},{"value":0},{"value":0},{"value":32},{"value":356254652301312},{"value":0},{"value":356254652301312},{"value":6400453616},{"value":0},{"value":17179869186},{"value":18446744073709550527},{"value":2}],"flavor":"ARM_THREAD_STATE64","lr":{"value":6562984864},"cpsr":{"value":4096},"fp":{"value":6400452880},"sp":{"value":6400452800},"esr":{"value":1442840704,"description":" Address size fault"},"pc":{"value":6562909236},"far":{"value":0}},"frames":[{"imageOffset":3124,"symbol":"mach_msg2_trap","symbolLocation":8,"imageIndex":11},{"imageOffset":78752,"symbol":"mach_msg2_internal","symbolLocation":76,"imageIndex":11},{"imageOffset":38756,"symbol":"mach_msg_overwrite","symbolLocation":484,"imageIndex":11},{"imageOffset":4008,"symbol":"mach_msg","symbolLocation":24,"imageIndex":11},{"imageOffset":8168220,"symbol":"ChromeMain","symbolLocation":8145908,"imageIndex":1},{"imageOffset":8158408,"symbol":"ChromeMain","symbolLocation":8136096,"imageIndex":1},{"imageOffset":8154928,"symbol":"ChromeMain","symbolLocation":8132616,"imageIndex":1},{"imageOffset":8154692,"symbol":"ChromeMain","symbolLocation":8132380,"imageIndex":1},{"imageOffset":24215272,"symbol":"ChromeMain","symbolLocation":24192960,"imageIndex":1},{"imageOffset":27660,"symbol":"_pthread_start","symbolLocation":136,"imageIndex":12},{"imageOffset":7040,"symbol":"thread_start","symbolLocation":8,"imageIndex":12}]},{"id":29996986,"name":"ThreadPoolForegroundWorker","threadState":{"x":[{"value":268451845},{"value":17179869186},{"value":0},{"value":354055629045760},{"value":0},{"value":354055629045760},{"value":32},{"value":0},{"value":0},{"value":17179869184},{"value":32},{"value":0},{"value":0},{"value":0},{"value":82435},{"value":4739584},{"value":18446744073709551569},{"value":1288519479296},{"value":0},{"value":0},{"value":32},{"value":354055629045760},{"value":0},{"value":354055629045760},{"value":6408874992},{"value":0},{"value":17179869186},{"value":18446744073709550527},{"value":2}],"flavor":"ARM_THREAD_STATE64","lr":{"value":6562984864},"cpsr":{"value":4096},"fp":{"value":6408874256},"sp":{"value":6408874176},"esr":{"value":1442840704,"description":" Address size fault"},"pc":{"value":6562909236},"far":{"value":0}},"frames":[{"imageOffset":3124,"symbol":"mach_msg2_trap","symbolLocation":8,"imageIndex":11},{"imageOffset":78752,"symbol":"mach_msg2_internal","symbolLocation":76,"imageIndex":11},{"imageOffset":38756,"symbol":"mach_msg_overwrite","symbolLocation":484,"imageIndex":11},{"imageOffset":4008,"symbol":"mach_msg","symbolLocation":24,"imageIndex":11},{"imageOffset":8168220,"symbol":"ChromeMain","symbolLocation":8145908,"imageIndex":1},{"imageOffset":8158408,"symbol":"ChromeMain","symbolLocation":8136096,"imageIndex":1},{"imageOffset":8154928,"symbol":"ChromeMain","symbolLocation":8132616,"imageIndex":1},{"imageOffset":8154692,"symbol":"ChromeMain","symbolLocation":8132380,"imageIndex":1},{"imageOffset":24215272,"symbol":"ChromeMain","symbolLocation":24192960,"imageIndex":1},{"imageOffset":27660,"symbol":"_pthread_start","symbolLocation":136,"imageIndex":12},{"imageOffset":7040,"symbol":"thread_start","symbolLocation":8,"imageIndex":12}]},{"id":29996987,"name":"ThreadPoolSingleThreadSharedBackgroundBlocking3","threadState":{"x":[{"value":268451845},{"value":17179869186},{"value":0},{"value":300179559284736},{"value":0},{"value":300179559284736},{"value":32},{"value":0},{"value":0},{"value":17179869184},{"value":32},{"value":0},{"value":0},{"value":0},{"value":69891},{"value":447360},{"value":18446744073709551569},{"value":1288519475200},{"value":0},{"value":0},{"value":32},{"value":300179559284736},{"value":0},{"value":300179559284736},{"value":6417296368},{"value":0},{"value":17179869186},{"value":18446744073709550527},{"value":2}],"flavor":"ARM_THREAD_STATE64","lr":{"value":6562984864},"cpsr":{"value":4096},"fp":{"value":6417295632},"sp":{"value":6417295552},"esr":{"value":1442840704,"description":" Address size fault"},"pc":{"value":6562909236},"far":{"value":0}},"frames":[{"imageOffset":3124,"symbol":"mach_msg2_trap","symbolLocation":8,"imageIndex":11},{"imageOffset":78752,"symbol":"mach_msg2_internal","symbolLocation":76,"imageIndex":11},{"imageOffset":38756,"symbol":"mach_msg_overwrite","symbolLocation":484,"imageIndex":11},{"imageOffset":4008,"symbol":"mach_msg","symbolLocation":24,"imageIndex":11},{"imageOffset":8168220,"symbol":"ChromeMain","symbolLocation":8145908,"imageIndex":1},{"imageOffset":8158408,"symbol":"ChromeMain","symbolLocation":8136096,"imageIndex":1},{"imageOffset":8155060,"symbol":"ChromeMain","symbolLocation":8132748,"imageIndex":1},{"imageOffset":8154876,"symbol":"ChromeMain","symbolLocation":8132564,"imageIndex":1},{"imageOffset":24215272,"symbol":"ChromeMain","symbolLocation":24192960,"imageIndex":1},{"imageOffset":27660,"symbol":"_pthread_start","symbolLocation":136,"imageIndex":12},{"imageOffset":7040,"symbol":"thread_start","symbolLocation":8,"imageIndex":12}]},{"id":29996989,"name":"NetworkConfigWatcher","threadState":{"x":[{"value":268451845},{"value":21592279046},{"value":8589934592},{"value":307876140679168},{"value":0},{"value":307876140679168},{"value":2},{"value":4294967295},{"value":0},{"value":17179869184},{"value":0},{"value":2},{"value":0},{"value":0},{"value":71683},{"value":0},{"value":18446744073709551569},{"value":8426890936},{"value":0},{"value":4294967295},{"value":2},{"value":307876140679168},{"value":0},{"value":307876140679168},{"value":6425714088},{"value":8589934592},{"value":21592279046},{"value":18446744073709550527},{"value":4412409862}],"flavor":"ARM_THREAD_STATE64","lr":{"value":6562984864},"cpsr":{"value":4096},"fp":{"value":6425713936},"sp":{"value":6425713856},"esr":{"value":1442840704,"description":" Address size fault"},"pc":{"value":6562909236},"far":{"value":0}},"frames":[{"imageOffset":3124,"symbol":"mach_msg2_trap","symbolLocation":8,"imageIndex":11},{"imageOffset":78752,"symbol":"mach_msg2_internal","symbolLocation":76,"imageIndex":11},{"imageOffset":38756,"symbol":"mach_msg_overwrite","symbolLocation":484,"imageIndex":11},{"imageOffset":4008,"symbol":"mach_msg","symbolLocation":24,"imageIndex":11},{"imageOffset":511612,"symbol":"__CFRunLoopServiceMachPort","symbolLocation":160,"imageIndex":6},{"imageOffset":505752,"symbol":"__CFRunLoopRun","symbolLocation":1208,"imageIndex":6},{"imageOffset":502872,"symbol":"CFRunLoopRunSpecific","symbolLocation":572,"imageIndex":6},{"imageOffset":367736,"symbol":"-[NSRunLoop(NSRunLoop) runMode:beforeDate:]","symbolLocation":212,"imageIndex":13},{"imageOffset":42171600,"symbol":"ChromeMain","symbolLocation":42149288,"imageIndex":1},{"imageOffset":42171296,"symbol":"ChromeMain","symbolLocation":42148984,"imageIndex":1},{"imageOffset":29148020,"symbol":"ChromeMain","symbolLocation":29125708,"imageIndex":1},{"imageOffset":34798792,"symbol":"ChromeMain","symbolLocation":34776480,"imageIndex":1},{"imageOffset":34192008,"symbol":"ChromeMain","symbolLocation":34169696,"imageIndex":1},{"imageOffset":34191384,"symbol":"ChromeMain","symbolLocation":34169072,"imageIndex":1},{"imageOffset":24215272,"symbol":"ChromeMain","symbolLocation":24192960,"imageIndex":1},{"imageOffset":27660,"symbol":"_pthread_start","symbolLocation":136,"imageIndex":12},{"imageOffset":7040,"symbol":"thread_start","symbolLocation":8,"imageIndex":12}]},{"id":29996990,"name":"ThreadPoolForegroundWorker","threadState":{"x":[{"value":268451845},{"value":17179869186},{"value":0},{"value":304594785665024},{"value":0},{"value":304594785665024},{"value":32},{"value":0},{"value":0},{"value":17179869184},{"value":32},{"value":0},{"value":0},{"value":0},{"value":70919},{"value":31558176},{"value":18446744073709551569},{"value":1288522702848},{"value":0},{"value":0},{"value":32},{"value":304594785665024},{"value":0},{"value":304594785665024},{"value":6434139120},{"value":0},{"value":17179869186},{"value":18446744073709550527},{"value":2}],"flavor":"ARM_THREAD_STATE64","lr":{"value":6562984864},"cpsr":{"value":4096},"fp":{"value":6434138384},"sp":{"value":6434138304},"esr":{"value":1442840704,"description":" Address size fault"},"pc":{"value":6562909236},"far":{"value":0}},"frames":[{"imageOffset":3124,"symbol":"mach_msg2_trap","symbolLocation":8,"imageIndex":11},{"imageOffset":78752,"symbol":"mach_msg2_internal","symbolLocation":76,"imageIndex":11},{"imageOffset":38756,"symbol":"mach_msg_overwrite","symbolLocation":484,"imageIndex":11},{"imageOffset":4008,"symbol":"mach_msg","symbolLocation":24,"imageIndex":11},{"imageOffset":8168220,"symbol":"ChromeMain","symbolLocation":8145908,"imageIndex":1},{"imageOffset":8158408,"symbol":"ChromeMain","symbolLocation":8136096,"imageIndex":1},{"imageOffset":8154928,"symbol":"ChromeMain","symbolLocation":8132616,"imageIndex":1},{"imageOffset":8154692,"symbol":"ChromeMain","symbolLocation":8132380,"imageIndex":1},{"imageOffset":24215272,"symbol":"ChromeMain","symbolLocation":24192960,"imageIndex":1},{"imageOffset":27660,"symbol":"_pthread_start","symbolLocation":136,"imageIndex":12},{"imageOffset":7040,"symbol":"thread_start","symbolLocation":8,"imageIndex":12}]},{"id":29996991,"name":"ThreadPoolForegroundWorker","threadState":{"x":[{"value":268451845},{"value":17179869186},{"value":0},{"value":305694297292800},{"value":0},{"value":305694297292800},{"value":32},{"value":0},{"value":0},{"value":17179869184},{"value":32},{"value":0},{"value":0},{"value":0},{"value":71175},{"value":35957408},{"value":18446744073709551569},{"value":1288522706944},{"value":0},{"value":0},{"value":32},{"value":305694297292800},{"value":0},{"value":305694297292800},{"value":12893301744},{"value":0},{"value":17179869186},{"value":18446744073709550527},{"value":2}],"flavor":"ARM_THREAD_STATE64","lr":{"value":6562984864},"cpsr":{"value":4096},"fp":{"value":12893301008},"sp":{"value":12893300928},"esr":{"value":1442840704,"description":" Address size fault"},"pc":{"value":6562909236},"far":{"value":0}},"frames":[{"imageOffset":3124,"symbol":"mach_msg2_trap","symbolLocation":8,"imageIndex":11},{"imageOffset":78752,"symbol":"mach_msg2_internal","symbolLocation":76,"imageIndex":11},{"imageOffset":38756,"symbol":"mach_msg_overwrite","symbolLocation":484,"imageIndex":11},{"imageOffset":4008,"symbol":"mach_msg","symbolLocation":24,"imageIndex":11},{"imageOffset":8168220,"symbol":"ChromeMain","symbolLocation":8145908,"imageIndex":1},{"imageOffset":8158408,"symbol":"ChromeMain","symbolLocation":8136096,"imageIndex":1},{"imageOffset":8154928,"symbol":"ChromeMain","symbolLocation":8132616,"imageIndex":1},{"imageOffset":8154692,"symbol":"ChromeMain","symbolLocation":8132380,"imageIndex":1},{"imageOffset":24215272,"symbol":"ChromeMain","symbolLocation":24192960,"imageIndex":1},{"imageOffset":27660,"symbol":"_pthread_start","symbolLocation":136,"imageIndex":12},{"imageOffset":7040,"symbol":"thread_start","symbolLocation":8,"imageIndex":12}]},{"id":29996992,"name":"ThreadPoolForegroundWorker","threadState":{"x":[{"value":268451845},{"value":17179869186},{"value":0},{"value":347458559279104},{"value":0},{"value":347458559279104},{"value":32},{"value":0},{"value":0},{"value":17179869184},{"value":32},{"value":0},{"value":0},{"value":0},{"value":80899},{"value":3920768},{"value":18446744073709551569},{"value":8426889296},{"value":0},{"value":0},{"value":32},{"value":347458559279104},{"value":0},{"value":347458559279104},{"value":12901723120},{"value":0},{"value":17179869186},{"value":18446744073709550527},{"value":2}],"flavor":"ARM_THREAD_STATE64","lr":{"value":6562984864},"cpsr":{"value":4096},"fp":{"value":12901722384},"sp":{"value":12901722304},"esr":{"value":1442840704,"description":" Address size fault"},"pc":{"value":6562909236},"far":{"value":0}},"frames":[{"imageOffset":3124,"symbol":"mach_msg2_trap","symbolLocation":8,"imageIndex":11},{"imageOffset":78752,"symbol":"mach_msg2_internal","symbolLocation":76,"imageIndex":11},{"imageOffset":38756,"symbol":"mach_msg_overwrite","symbolLocation":484,"imageIndex":11},{"imageOffset":4008,"symbol":"mach_msg","symbolLocation":24,"imageIndex":11},{"imageOffset":8168220,"symbol":"ChromeMain","symbolLocation":8145908,"imageIndex":1},{"imageOffset":8158408,"symbol":"ChromeMain","symbolLocation":8136096,"imageIndex":1},{"imageOffset":8154928,"symbol":"ChromeMain","symbolLocation":8132616,"imageIndex":1},{"imageOffset":8154692,"symbol":"ChromeMain","symbolLocation":8132380,"imageIndex":1},{"imageOffset":24215272,"symbol":"ChromeMain","symbolLocation":24192960,"imageIndex":1},{"imageOffset":27660,"symbol":"_pthread_start","symbolLocation":136,"imageIndex":12},{"imageOffset":7040,"symbol":"thread_start","symbolLocation":8,"imageIndex":12}]},{"id":29996993,"name":"ThreadPoolForegroundWorker","threadState":{"x":[{"value":268451845},{"value":17179869186},{"value":0},{"value":345259536023552},{"value":0},{"value":345259536023552},{"value":32},{"value":0},{"value":0},{"value":17179869184},{"value":32},{"value":0},{"value":0},{"value":0},{"value":80387},{"value":31681536},{"value":18446744073709551569},{"value":8426889304},{"value":0},{"value":0},{"value":32},{"value":345259536023552},{"value":0},{"value":345259536023552},{"value":12910144496},{"value":0},{"value":17179869186},{"value":18446744073709550527},{"value":2}],"flavor":"ARM_THREAD_STATE64","lr":{"value":6562984864},"cpsr":{"value":4096},"fp":{"value":12910143760},"sp":{"value":12910143680},"esr":{"value":1442840704,"description":" Address size fault"},"pc":{"value":6562909236},"far":{"value":0}},"frames":[{"imageOffset":3124,"symbol":"mach_msg2_trap","symbolLocation":8,"imageIndex":11},{"imageOffset":78752,"symbol":"mach_msg2_internal","symbolLocation":76,"imageIndex":11},{"imageOffset":38756,"symbol":"mach_msg_overwrite","symbolLocation":484,"imageIndex":11},{"imageOffset":4008,"symbol":"mach_msg","symbolLocation":24,"imageIndex":11},{"imageOffset":8168220,"symbol":"ChromeMain","symbolLocation":8145908,"imageIndex":1},{"imageOffset":8158408,"symbol":"ChromeMain","symbolLocation":8136096,"imageIndex":1},{"imageOffset":8154928,"symbol":"ChromeMain","symbolLocation":8132616,"imageIndex":1},{"imageOffset":8154692,"symbol":"ChromeMain","symbolLocation":8132380,"imageIndex":1},{"imageOffset":24215272,"symbol":"ChromeMain","symbolLocation":24192960,"imageIndex":1},{"imageOffset":27660,"symbol":"_pthread_start","symbolLocation":136,"imageIndex":12},{"imageOffset":7040,"symbol":"thread_start","symbolLocation":8,"imageIndex":12}]},{"id":29996994,"name":"ThreadPoolForegroundWorker","threadState":{"x":[{"value":268451845},{"value":17179869186},{"value":0},{"value":311174675562496},{"value":0},{"value":311174675562496},{"value":32},{"value":0},{"value":0},{"value":17179869184},{"value":32},{"value":0},{"value":0},{"value":0},{"value":72451},{"value":31701120},{"value":18446744073709551569},{"value":1288522731520},{"value":0},{"value":0},{"value":32},{"value":311174675562496},{"value":0},{"value":311174675562496},{"value":12918565872},{"value":0},{"value":17179869186},{"value":18446744073709550527},{"value":2}],"flavor":"ARM_THREAD_STATE64","lr":{"value":6562984864},"cpsr":{"value":4096},"fp":{"value":12918565136},"sp":{"value":12918565056},"esr":{"value":1442840704,"description":" Address size fault"},"pc":{"value":6562909236},"far":{"value":0}},"frames":[{"imageOffset":3124,"symbol":"mach_msg2_trap","symbolLocation":8,"imageIndex":11},{"imageOffset":78752,"symbol":"mach_msg2_internal","symbolLocation":76,"imageIndex":11},{"imageOffset":38756,"symbol":"mach_msg_overwrite","symbolLocation":484,"imageIndex":11},{"imageOffset":4008,"symbol":"mach_msg","symbolLocation":24,"imageIndex":11},{"imageOffset":8168220,"symbol":"ChromeMain","symbolLocation":8145908,"imageIndex":1},{"imageOffset":8158408,"symbol":"ChromeMain","symbolLocation":8136096,"imageIndex":1},{"imageOffset":8154928,"symbol":"ChromeMain","symbolLocation":8132616,"imageIndex":1},{"imageOffset":8154692,"symbol":"ChromeMain","symbolLocation":8132380,"imageIndex":1},{"imageOffset":24215272,"symbol":"ChromeMain","symbolLocation":24192960,"imageIndex":1},{"imageOffset":27660,"symbol":"_pthread_start","symbolLocation":136,"imageIndex":12},{"imageOffset":7040,"symbol":"thread_start","symbolLocation":8,"imageIndex":12}]},{"id":29997087,"name":"com.apple.NSEventThread","threadState":{"x":[{"value":0},{"value":21592279046},{"value":8589934592},{"value":473919576342528},{"value":0},{"value":473919576342528},{"value":2},{"value":4294967295},{"value":0},{"value":17179869184},{"value":0},{"value":2},{"value":0},{"value":0},{"value":110343},{"value":0},{"value":18446744073709551569},{"value":8426890936},{"value":0},{"value":4294967295},{"value":2},{"value":473919576342528},{"value":0},{"value":473919576342528},{"value":6434709640},{"value":8589934592},{"value":21592279046},{"value":18446744073709550527},{"value":4412409862}],"flavor":"ARM_THREAD_STATE64","lr":{"value":6562984864},"cpsr":{"value":4096},"fp":{"value":6434709488},"sp":{"value":6434709408},"esr":{"value":1442840704,"description":" Address size fault"},"pc":{"value":6562909236},"far":{"value":0}},"frames":[{"imageOffset":3124,"symbol":"mach_msg2_trap","symbolLocation":8,"imageIndex":11},{"imageOffset":78752,"symbol":"mach_msg2_internal","symbolLocation":76,"imageIndex":11},{"imageOffset":38756,"symbol":"mach_msg_overwrite","symbolLocation":484,"imageIndex":11},{"imageOffset":4008,"symbol":"mach_msg","symbolLocation":24,"imageIndex":11},{"imageOffset":511612,"symbol":"__CFRunLoopServiceMachPort","symbolLocation":160,"imageIndex":6},{"imageOffset":505752,"symbol":"__CFRunLoopRun","symbolLocation":1208,"imageIndex":6},{"imageOffset":502872,"symbol":"CFRunLoopRunSpecific","symbolLocation":572,"imageIndex":6},{"imageOffset":1435644,"symbol":"_NSEventThread","symbolLocation":140,"imageIndex":8},{"imageOffset":27660,"symbol":"_pthread_start","symbolLocation":136,"imageIndex":12},{"imageOffset":7040,"symbol":"thread_start","symbolLocation":8,"imageIndex":12}]},{"id":29997227,"name":"org.libusb.device-hotplug","threadState":{"x":[{"value":268451845},{"value":21592279046},{"value":8589934592},{"value":447565657014272},{"value":0},{"value":447565657014272},{"value":2},{"value":4294967295},{"value":0},{"value":17179869184},{"value":0},{"value":2},{"value":0},{"value":0},{"value":104207},{"value":0},{"value":18446744073709551569},{"value":10236681961458002872,"symbolLocation":10236681953013137424,"symbol":"libSystem_initializer.libkernel_funcs"},{"value":0},{"value":4294967295},{"value":2},{"value":447565657014272},{"value":0},{"value":447565657014272},{"value":6435856424},{"value":8589934592},{"value":21592279046},{"value":18446744073709550527},{"value":4412409862}],"flavor":"ARM_THREAD_STATE64","lr":{"value":6562984864},"cpsr":{"value":4096},"fp":{"value":6435856272},"sp":{"value":6435856192},"esr":{"value":1442840704,"description":" Address size fault"},"pc":{"value":6562909236},"far":{"value":0}},"frames":[{"imageOffset":3124,"symbol":"mach_msg2_trap","symbolLocation":8,"imageIndex":11},{"imageOffset":78752,"symbol":"mach_msg2_internal","symbolLocation":76,"imageIndex":11},{"imageOffset":38756,"symbol":"mach_msg_overwrite","symbolLocation":484,"imageIndex":11},{"imageOffset":4008,"symbol":"mach_msg","symbolLocation":24,"imageIndex":11},{"imageOffset":511612,"symbol":"__CFRunLoopServiceMachPort","symbolLocation":160,"imageIndex":6},{"imageOffset":505752,"symbol":"__CFRunLoopRun","symbolLocation":1208,"imageIndex":6},{"imageOffset":502872,"symbol":"CFRunLoopRunSpecific","symbolLocation":572,"imageIndex":6},{"imageOffset":1001236,"symbol":"CFRunLoopRun","symbolLocation":64,"imageIndex":6},{"imageOffset":45913244,"symbol":"ChromeMain","symbolLocation":45890932,"imageIndex":1},{"imageOffset":27660,"symbol":"_pthread_start","symbolLocation":136,"imageIndex":12},{"imageOffset":7040,"symbol":"thread_start","symbolLocation":8,"imageIndex":12}]},{"id":29997228,"name":"UsbEventHandler","threadState":{"x":[{"value":4},{"value":0},{"value":60000},{"value":32},{"value":65536},{"value":12926986952},{"value":12926986951},{"value":0},{"value":0},{"value":0},{"value":60000},{"value":2},{"value":1},{"value":5760},{"value":48},{"value":8409826692,"symbolLocation":0,"symbol":"vm_page_shift"},{"value":230},{"value":5068559632},{"value":0},{"value":1288507814656},{"value":1288543487104},{"value":2},{"value":60},{"value":5071757312},{"value":0},{"value":1288507815000},{"value":1288507814992},{"value":0},{"value":0}],"flavor":"ARM_THREAD_STATE64","lr":{"value":4899834164},"cpsr":{"value":1610616832},"fp":{"value":12926987728},"sp":{"value":12926987648},"esr":{"value":1442840704,"description":" Address size fault"},"pc":{"value":6562944152},"far":{"value":0}},"frames":[{"imageOffset":38040,"symbol":"poll","symbolLocation":8,"imageIndex":11},{"imageOffset":42830132,"symbol":"ChromeMain","symbolLocation":42807820,"imageIndex":1},{"imageOffset":42829304,"symbol":"ChromeMain","symbolLocation":42806992,"imageIndex":1},{"imageOffset":24215272,"symbol":"ChromeMain","symbolLocation":24192960,"imageIndex":1},{"imageOffset":27660,"symbol":"_pthread_start","symbolLocation":136,"imageIndex":12},{"imageOffset":7040,"symbol":"thread_start","symbolLocation":8,"imageIndex":12}]},{"id":30000875,"frames":[{"imageOffset":7020,"symbol":"start_wqthread","symbolLocation":0,"imageIndex":12}],"threadState":{"x":[{"value":6170783744},{"value":57927},{"value":6170247168},{"value":0},{"value":409602},{"value":18446744073709551615},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0}],"flavor":"ARM_THREAD_STATE64","lr":{"value":0},"cpsr":{"value":4096},"fp":{"value":0},"sp":{"value":6170783744},"esr":{"value":1442840704,"description":" Address size fault"},"pc":{"value":6563158892},"far":{"value":0}}},{"id":30001577,"frames":[{"imageOffset":7020,"symbol":"start_wqthread","symbolLocation":0,"imageIndex":12}],"threadState":{"x":[{"value":6172504064},{"value":153007},{"value":6171967488},{"value":6172502912},{"value":5193734},{"value":1},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0}],"flavor":"ARM_THREAD_STATE64","lr":{"value":0},"cpsr":{"value":4096},"fp":{"value":0},"sp":{"value":6172502752},"esr":{"value":1442840704,"description":" Address size fault"},"pc":{"value":6563158892},"far":{"value":0}}},{"id":30001670,"frames":[{"imageOffset":7020,"symbol":"start_wqthread","symbolLocation":0,"imageIndex":12}],"threadState":{"x":[{"value":6171357184},{"value":128083},{"value":6170820608},{"value":6171356032},{"value":5193730},{"value":1},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0}],"flavor":"ARM_THREAD_STATE64","lr":{"value":0},"cpsr":{"value":4096},"fp":{"value":0},"sp":{"value":6171356016},"esr":{"value":1442840704,"description":" Address size fault"},"pc":{"value":6563158892},"far":{"value":0}}},{"id":30001671,"frames":[{"imageOffset":7020,"symbol":"start_wqthread","symbolLocation":0,"imageIndex":12}],"threadState":{"x":[{"value":6173077504},{"value":0},{"value":6172540928},{"value":0},{"value":278532},{"value":18446744073709551615},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0},{"value":0}],"flavor":"ARM_THREAD_STATE64","lr":{"value":0},"cpsr":{"value":4096},"fp":{"value":0},"sp":{"value":6173077504},"esr":{"value":0,"description":" Address size fault"},"pc":{"value":6563158892},"far":{"value":0}}}],
+  "usedImages" : [
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4296654848,
+    "CFBundleShortVersionString" : "141.0.7390.55",
+    "CFBundleIdentifier" : "com.google.Chrome",
+    "size" : 16384,
+    "uuid" : "4c4c443d-5555-3144-a13c-a6d122e74bce",
+    "path" : "\/Applications\/Google Chrome.app\/Contents\/MacOS\/Google Chrome",
+    "name" : "Google Chrome",
+    "CFBundleVersion" : "7390.55"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4857004032,
+    "CFBundleShortVersionString" : "141.0.7390.55",
+    "CFBundleIdentifier" : "com.google.Chrome.framework",
+    "size" : 200785920,
+    "uuid" : "4c4c442f-5555-3144-a194-758c1292b021",
+    "path" : "\/Applications\/Google Chrome.app\/Contents\/Frameworks\/Google Chrome Framework.framework\/Versions\/141.0.7390.55\/Google Chrome Framework",
+    "name" : "Google Chrome Framework",
+    "CFBundleVersion" : "7390.55"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64e",
+    "base" : 4473503744,
+    "size" : 49152,
+    "uuid" : "d02a05cb-6440-3e7e-a02f-931734cab666",
+    "path" : "\/usr\/lib\/libobjc-trampolines.dylib",
+    "name" : "libobjc-trampolines.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64e",
+    "base" : 4649123840,
+    "CFBundleShortVersionString" : "327.5",
+    "CFBundleIdentifier" : "com.apple.AGXMetalG13X",
+    "size" : 6914048,
+    "uuid" : "a459e0d8-5ddb-360f-817e-bc708b1711b0",
+    "path" : "\/System\/Library\/Extensions\/AGXMetalG13X.bundle\/Contents\/MacOS\/AGXMetalG13X",
+    "name" : "AGXMetalG13X",
+    "CFBundleVersion" : "327.5"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 5255954432,
+    "size" : 11190272,
+    "uuid" : "4c4c4406-5555-3144-a1b9-3cc5009d46ec",
+    "path" : "\/Applications\/Google Chrome.app\/Contents\/Frameworks\/Google Chrome Framework.framework\/Versions\/141.0.7390.55\/Libraries\/liboptimization_guide_internal.dylib",
+    "name" : "liboptimization_guide_internal.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64e",
+    "base" : 4845748224,
+    "CFBundleShortVersionString" : "3.0",
+    "CFBundleIdentifier" : "com.apple.security.csparser",
+    "size" : 131072,
+    "uuid" : "c12848ee-0663-3987-842f-8832599d139f",
+    "path" : "\/System\/Library\/Frameworks\/Security.framework\/Versions\/A\/PlugIns\/csparser.bundle\/Contents\/MacOS\/csparser",
+    "name" : "csparser",
+    "CFBundleVersion" : "61439.120.27"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64e",
+    "base" : 6563631104,
+    "CFBundleShortVersionString" : "6.9",
+    "CFBundleIdentifier" : "com.apple.CoreFoundation",
+    "size" : 5500928,
+    "uuid" : "df489a59-b4f6-32b8-9bb4-9b832960aa52",
+    "path" : "\/System\/Library\/Frameworks\/CoreFoundation.framework\/Versions\/A\/CoreFoundation",
+    "name" : "CoreFoundation",
+    "CFBundleVersion" : "3502.1.401"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64e",
+    "base" : 6758977536,
+    "CFBundleShortVersionString" : "2.1.1",
+    "CFBundleIdentifier" : "com.apple.HIToolbox",
+    "size" : 3174368,
+    "uuid" : "9286e29f-fcee-31d0-acea-2842ea23bedf",
+    "path" : "\/System\/Library\/Frameworks\/Carbon.framework\/Versions\/A\/Frameworks\/HIToolbox.framework\/Versions\/A\/HIToolbox",
+    "name" : "HIToolbox"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64e",
+    "base" : 6630117376,
+    "CFBundleShortVersionString" : "6.9",
+    "CFBundleIdentifier" : "com.apple.AppKit",
+    "size" : 21568640,
+    "uuid" : "5d0da1bd-412c-3ed8-84e9-40ca62fe7b42",
+    "path" : "\/System\/Library\/Frameworks\/AppKit.framework\/Versions\/C\/AppKit",
+    "name" : "AppKit",
+    "CFBundleVersion" : "2575.60.5"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64e",
+    "base" : 6559350784,
+    "size" : 636112,
+    "uuid" : "9cf0401a-a938-389e-a77d-9e9608076ccf",
+    "path" : "\/usr\/lib\/dyld",
+    "name" : "dyld"
+  },
+  {
+    "size" : 0,
+    "source" : "A",
+    "base" : 0,
+    "uuid" : "00000000-0000-0000-0000-000000000000"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64e",
+    "base" : 6562906112,
+    "size" : 243284,
+    "uuid" : "60485b6f-67e5-38c1-aec9-efd6031ff166",
+    "path" : "\/usr\/lib\/system\/libsystem_kernel.dylib",
+    "name" : "libsystem_kernel.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64e",
+    "base" : 6563151872,
+    "size" : 51784,
+    "uuid" : "647b91fc-96d3-3bbb-af08-970df45257c8",
+    "path" : "\/usr\/lib\/system\/libsystem_pthread.dylib",
+    "name" : "libsystem_pthread.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64e",
+    "base" : 6586634240,
+    "CFBundleShortVersionString" : "6.9",
+    "CFBundleIdentifier" : "com.apple.Foundation",
+    "size" : 14586624,
+    "uuid" : "e8f6a451-0acc-3e05-b18f-fec6618ce44a",
+    "path" : "\/System\/Library\/Frameworks\/Foundation.framework\/Versions\/C\/Foundation",
+    "name" : "Foundation",
+    "CFBundleVersion" : "3502.1.401"
+  }
+],
+  "sharedCache" : {
+  "base" : 6558515200,
+  "size" : 5047205888,
+  "uuid" : "d7397d7f-8df9-3920-81a7-c0a144be9c51"
+},
+  "legacyInfo" : {
+  "threadTriggered" : {
+    "name" : "CrBrowserMain",
+    "queue" : "com.apple.main-thread"
+  }
+},
+  "logWritingSignature" : "a764c503599fccce4fd55abd38804f09d348bc80",
+  "trialInfo" : {
+  "rollouts" : [
+    {
+      "rolloutId" : "64628732bf2f5257dedc8988",
+      "factorPackIds" : {
+
+      },
+      "deploymentId" : 240000001
+    },
+    {
+      "rolloutId" : "61675b89201f677a9a4cbd65",
+      "factorPackIds" : {
+        "HEALTH_FEATURE_AVAILABILITY" : "65a855f5f087695cfac03d1f"
+      },
+      "deploymentId" : 240000231
+    }
+  ],
+  "experiments" : [
+
+  ]
+}
+}
+
