@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "File System Access API Crash Reproducer",
+  "version": "1.0.0",
+  "description": "Minimal extension to reproduce Chrome crash when calling window.showDirectoryPicker() from extension contexts on macOS",
+  "permissions": [
+    "sidePanel"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Open Side Panel"
+  },
+  "side_panel": {
+    "default_path": "sidepanel.html"
+  }
+}

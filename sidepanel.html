@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Side Panel - File System Crash Test</title>
+  <style>
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      padding: 20px;
+      margin: 0;
+      background: #f5f5f5;
+    }
+    h1 {
+      font-size: 18px;
+      margin-bottom: 20px;
+      color: #333;
+    }
+    button {
+      padding: 12px 24px;
+      font-size: 14px;
+      background: #4285f4;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 100%;
+      margin-bottom: 10px;
+    }
+    button:hover {
+      background: #3367d6;
+    }
+    .warning {
+      padding: 12px;
+      background: #fff3cd;
+      border: 1px solid #ffc107;
+      border-radius: 4px;
+      margin-bottom: 20px;
+      color: #856404;
+      font-size: 13px;
+    }
+    .result {
+      margin-top: 20px;
+      padding: 12px;
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 13px;
+      font-family: monospace;
+      white-space: pre-wrap;
+      word-break: break-all;
+    }
+  </style>
+</head>
+<body>
+  <h1>Side Panel - File System Crash Test</h1>
+
+  <div class="warning">
+    ⚠️ <strong>Warning:</strong> On macOS, clicking this button will likely crash Chrome.
+  </div>
+
+  <button id="testBtn">Call window.showDirectoryPicker()</button>
+
+  <div id="result"></div>
+
+  <script src="sidepanel.js"></script>
+</body>
+</html>
