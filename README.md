@@ -29,8 +29,8 @@ When calling the File System Access API's `window.showDirectoryPicker()` from a 
 
 ## Environment
 
-- **OS**: macOS (tested on macOS Sonoma/Sequoia)
-- **Chrome**: Version 131+ (likely affects earlier versions too)
+- **OS**: macOS 15.5 (24F74)
+- **Chrome**: Version 141.0.7390.55 (Official Build) (arm64)
 - **Extension**: Manifest V3
 
 ## Reproduction Steps
